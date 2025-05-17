@@ -30,9 +30,6 @@ namespace Area2D {
 		// Встановлює нове значення для Y координати.
 		void setY(double y);
 
-		// Оператор присвоєння.
-		Coords& operator=(const Coords& other);
-
 		// Виводить координати точки в консоль у форматі (x, y).
 		friend std::ostream& operator<<(std::ostream& os, const Coords& point);
 

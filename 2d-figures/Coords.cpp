@@ -31,11 +31,4 @@ namespace Area2D {
 		return is;
 	}
 
-	Coords& Coords::operator=(const Coords& other) {
-		if (this != &other) {
-			x = other.x;
-			y = other.y;
-		}
-		return *this;
-	}
 }

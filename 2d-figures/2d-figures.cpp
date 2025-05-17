@@ -47,4 +47,5 @@ int main() {
 	cout << p1;
 	Coords p2 = p1;
 	cout << p2;
+
 }
