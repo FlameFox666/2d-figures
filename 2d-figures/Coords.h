@@ -33,7 +33,8 @@ namespace Area2D {
 		// ¬иводить координати точки в консоль у формат≥ (x, y).
 		friend std::ostream& operator<<(std::ostream& os, const Coords& point);
 
-		// «читуЇ координати з вх≥дного потоку у вигл€д≥ двох значень типу double.
+		// «читуЇ координати з вх≥дного потоку 
+		// у вигл€д≥ двох значень типу double.
 		friend std::istream& operator>>(std::istream& is, Coords& point);
 
 	};

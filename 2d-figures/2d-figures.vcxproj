@@ -128,12 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp" />
-    <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="Coords.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Oval.cpp" />
     <ClCompile Include="Polygon.cpp" />
     <ClCompile Include="Sector.cpp" />
+    <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h" />
@@ -142,6 +142,7 @@
     <ClInclude Include="Oval.h" />
     <ClInclude Include="Polygon.h" />
     <ClInclude Include="Sector.h" />
+    <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

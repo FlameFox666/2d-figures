@@ -16,48 +16,63 @@
     <Filter Include="Исходные файлы\Area2D">
       <UniqueIdentifier>{20b84f1c-0c75-43c3-94ca-a16185482071}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Area2D\Polygon">
+      <UniqueIdentifier>{1e88a5c6-279b-4d49-9688-0d1b6bf49964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Area2D\Oval">
+      <UniqueIdentifier>{b7c75556-f0e8-45af-9a7e-40a3bf6c1a6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Polygon">
+      <UniqueIdentifier>{bd3fdf86-2364-4ab9-af8f-2a47b5995601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Oval">
+      <UniqueIdentifier>{06547cd9-4f9c-408e-8609-4f3430a2c1ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Coords.cpp">
-      <Filter>Исходные файлы\Area2D</Filter>
+    <ClCompile Include="Sector.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Figure.cpp">
-      <Filter>Исходные файлы\Area2D</Filter>
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Coords.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Oval.cpp">
-      <Filter>Исходные файлы\Area2D</Filter>
+      <Filter>Исходные файлы\Area2D\Oval</Filter>
     </ClCompile>
-    <ClCompile Include="Sector.cpp">
-      <Filter>Исходные файлы\Area2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Canvas.cpp">
-      <Filter>Исходные файлы\Area2D</Filter>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Исходные файлы\Area2D\Polygon</Filter>
     </ClCompile>
     <ClCompile Include="Polygon.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Area2D\Polygon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Canvas.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
     <ClInclude Include="Coords.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Figure.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Oval.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Sector.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Canvas.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Oval.h">
+      <Filter>Файлы заголовков\Oval</Filter>
     </ClInclude>
     <ClInclude Include="Polygon.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Файлы заголовков\Polygon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
