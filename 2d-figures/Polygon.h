@@ -4,7 +4,11 @@
 namespace Area2D {
 
 	class Polygon : public Figure {
-	
+	protected:
+
+	public:
+
 	};
+
 }
 

@@ -1,5 +1,9 @@
 #pragma once
-class Sector {
 
-};
+namespace Area2D {
 
+	class Sector {
+
+	};
+
+}

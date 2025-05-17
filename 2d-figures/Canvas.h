@@ -1,5 +1,9 @@
 #pragma once
-class Canvas {
 
-};
+namespace Area2D {
 
+	class Canvas {
+
+	};
+
+}
