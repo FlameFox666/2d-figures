@@ -2,7 +2,7 @@
 #include "Coords.h"
 
 namespace Area2D {
-	// Базовий клас для всіх фігур.
+	// Базовий абстрактний клас для всіх фігур.
 	class Figure {
 	protected:
 		Coords* coords;

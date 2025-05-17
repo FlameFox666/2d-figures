@@ -51,6 +51,12 @@
     <ClCompile Include="Polygon.cpp">
       <Filter>Исходные файлы\Area2D\Polygon</Filter>
     </ClCompile>
+    <ClCompile Include="Ellipse.cpp">
+      <Filter>Исходные файлы\Area2D\Oval</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Исходные файлы\Area2D\Oval</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h">
@@ -73,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="Triangle.h">
       <Filter>Файлы заголовков\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="Ellipse.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

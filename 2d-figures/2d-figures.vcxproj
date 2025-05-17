@@ -128,7 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp" />
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Coords.cpp" />
+    <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Oval.cpp" />
     <ClCompile Include="Polygon.cpp" />
@@ -137,7 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h" />
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="Coords.h" />
+    <ClInclude Include="Ellipse.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Oval.h" />
     <ClInclude Include="Polygon.h" />

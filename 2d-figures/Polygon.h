@@ -2,7 +2,7 @@
 #include "Figure.h"
 
 namespace Area2D {
-
+	// Абстрактний клас, що описує фігури з вершинами та сторонами.
 	class Polygon : public Figure {
 	protected:
 		double* lines;
