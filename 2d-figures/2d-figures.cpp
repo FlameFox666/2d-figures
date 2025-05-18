@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "Coords.h"
+#include "Area2D.h"
 
 // Спроектувати та реалізувати бібліотеку класів для розробки програми знаходження площі 2D-фігур
 
@@ -36,6 +36,17 @@ Canvas
 
 */
 
+/*
+Полигоны: точка
+			точка
+			точка
+			точка
+
+Круги: центр
+	   точки радиуса
+	   точки радиуса
+*/
+
 using namespace Area2D;
 
 int main() {
@@ -43,9 +54,16 @@ int main() {
 	using std::cin;
 	using std::endl;
 	
-	Coords p1(1.2, 1.2);
-	cout << p1;
-	Coords p2 = p1;
-	cout << p2;
+	Coords coords[3] = {
+		{-1, -1}, {0, 2}, {2, -1}
+	};
 
+	//Triangle triangle1;
+	//Triangle triangle2({2, 31}, {-4, 1}, {3, -2});
+	Triangle triangle3(coords);
+
+	//triangle1.printCoords();
+	//triangle2.printCoords();
+	triangle3.printCoords();
+	cout << triangle3.perimeter();
 }

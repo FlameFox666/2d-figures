@@ -16,16 +16,22 @@
     <Filter Include="Исходные файлы\Area2D">
       <UniqueIdentifier>{20b84f1c-0c75-43c3-94ca-a16185482071}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Area2D\Polygon">
+    <Filter Include="Исходные файлы\Area2D\Figure">
+      <UniqueIdentifier>{8b72f3e0-c4fc-411f-a900-e9e473a8a495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Area2D\Figure\Polygon">
       <UniqueIdentifier>{1e88a5c6-279b-4d49-9688-0d1b6bf49964}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Area2D\Oval">
+    <Filter Include="Исходные файлы\Area2D\Figure\Oval">
       <UniqueIdentifier>{b7c75556-f0e8-45af-9a7e-40a3bf6c1a6d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Polygon">
+    <Filter Include="Файлы заголовков\Figure">
+      <UniqueIdentifier>{1179875b-d2f3-4f09-a9af-4810ea724f50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Figure\Polygon">
       <UniqueIdentifier>{bd3fdf86-2364-4ab9-af8f-2a47b5995601}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Oval">
+    <Filter Include="Файлы заголовков\Figure\Oval">
       <UniqueIdentifier>{06547cd9-4f9c-408e-8609-4f3430a2c1ad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -33,29 +39,29 @@
     <ClCompile Include="2d-figures.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Sector.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Figure.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Coords.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Oval.cpp">
-      <Filter>Исходные файлы\Area2D\Oval</Filter>
+      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
-      <Filter>Исходные файлы\Area2D\Polygon</Filter>
+      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
     <ClCompile Include="Polygon.cpp">
-      <Filter>Исходные файлы\Area2D\Polygon</Filter>
+      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
     <ClCompile Include="Ellipse.cpp">
-      <Filter>Исходные файлы\Area2D\Oval</Filter>
+      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
     <ClCompile Include="Circle.cpp">
-      <Filter>Исходные файлы\Area2D\Oval</Filter>
+      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
+    </ClCompile>
+    <ClCompile Include="Sector.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
+    </ClCompile>
+    <ClCompile Include="Figure.cpp">
+      <Filter>Исходные файлы\Area2D\Figure</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -65,26 +71,29 @@
     <ClInclude Include="Coords.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Figure.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Sector.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Oval.h">
-      <Filter>Файлы заголовков\Oval</Filter>
+      <Filter>Файлы заголовков\Figure\Oval</Filter>
     </ClInclude>
     <ClInclude Include="Polygon.h">
-      <Filter>Файлы заголовков\Polygon</Filter>
+      <Filter>Файлы заголовков\Figure\Polygon</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Файлы заголовков\Polygon</Filter>
+      <Filter>Файлы заголовков\Figure\Polygon</Filter>
     </ClInclude>
     <ClInclude Include="Ellipse.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Figure\Oval</Filter>
     </ClInclude>
     <ClInclude Include="Circle.h">
+      <Filter>Файлы заголовков\Figure\Oval</Filter>
+    </ClInclude>
+    <ClInclude Include="Sector.h">
+      <Filter>Файлы заголовков\Figure\Oval</Filter>
+    </ClInclude>
+    <ClInclude Include="Area2D.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Figure.h">
+      <Filter>Файлы заголовков\Figure</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

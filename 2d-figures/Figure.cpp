@@ -1,7 +1,7 @@
 #include "Figure.h"
 
 namespace Area2D {
-	Figure::Figure() : size(1), coords(new Coords[size]{ Coords() }) {}
+	Figure::Figure() : size(1), coords( nullptr ) {}
 
 	Figure::Figure(const Coords* coordsArray, int count) : size(count) {
 		coords = new Coords[size];

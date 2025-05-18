@@ -29,6 +29,9 @@ namespace Area2D {
 
 		// Чисто віртуальна функція для обчислення площі.
 		virtual double area() const = 0;
+	
+		// Чисто віртуальна функція для відображення координат фігури.
+		virtual void printCoords() const = 0;
 	};
 }
 
