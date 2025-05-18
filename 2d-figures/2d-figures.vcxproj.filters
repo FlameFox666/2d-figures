@@ -63,6 +63,18 @@
     <ClCompile Include="Figure.cpp">
       <Filter>Исходные файлы\Area2D\Figure</Filter>
     </ClCompile>
+    <ClCompile Include="Quadrilateral.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorMessage.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Ngon.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
+    </ClCompile>
+    <ClCompile Include="Canvas.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h">
@@ -94,6 +106,15 @@
     </ClInclude>
     <ClInclude Include="Figure.h">
       <Filter>Файлы заголовков\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="Quadrilateral.h">
+      <Filter>Файлы заголовков\Figure\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorMessage.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Ngon.h">
+      <Filter>Файлы заголовков\Figure\Polygon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

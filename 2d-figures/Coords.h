@@ -2,9 +2,11 @@
 #include <ostream>
 #include <istream>
 
-namespace Area2D {
+namespace Area2D 
+{
 	// Клас, що представляє точку в 2D просторі.
-	class Coords {
+	class Coords 
+	{
 	private:
 		double x;
 		double y;

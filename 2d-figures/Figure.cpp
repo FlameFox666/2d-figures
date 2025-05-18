@@ -1,14 +1,17 @@
 #include "Figure.h"
 
-namespace Area2D {
-	Figure::Figure() : size(0), coords( nullptr ) {}
+namespace Area2D 
+{
+	Figure::Figure() 
+		: name(NAME_PLACEHOLDER), size(0), coords(nullptr) {}
 
 	Figure::Figure(
 		const std::string& name, 
 		const Coords* coordsArray, 
 		int size
 	) 
-		: name(name), size(size) {
+		: name(name), size(size) 
+	{
 
 		coords = new Coords[size];
 		for (int i = 0; i < size; i++) {
@@ -16,14 +19,17 @@ namespace Area2D {
 		}
 	}
 
-	Figure::Figure(const Figure& other) : name(other.name), size(other.size) {
+	Figure::Figure(const Figure& other) 
+		: name(other.name), size(other.size) 
+	{
 		coords = new Coords[size];
 		for (int i = 0; i < size; i++) {
 			coords[i] = other.coords[i];
 		}
 	}
 
-	Figure& Figure::operator=(const Figure& other) {
+	Figure& Figure::operator=(const Figure& other) 
+	{
 		if (this != &other) {
 			delete[] coords;
 			size = other.size;
@@ -35,15 +41,18 @@ namespace Area2D {
 		return *this;
 	}
 
-	Figure::~Figure() {
+	Figure::~Figure() 
+	{
 		delete[] coords;
 	}
 
-	std::string Figure::getName() const {
+	std::string Figure::getName() const 
+	{
 		return this->name;
 	}
 
-	void Figure::setName(const std::string& name) {
+	void Figure::setName(const std::string& name) 
+	{
 		this->name = name;
 	}
 }

@@ -1,8 +1,10 @@
 #pragma once
 
-namespace Area2D {
+namespace Area2D 
+{
 
-	class Canvas {
+	class Canvas 
+	{
 
 	};
 

@@ -1,9 +1,11 @@
 #pragma once
 #include "Figure.h"
 
-namespace Area2D {
+namespace Area2D 
+{
 	// Абстрактний клас, що описує фігури з вершинами та сторонами.
-	class Polygon : public Figure {
+	class Polygon : public Figure 
+	{
 	protected:
 		double* lines;
 	public:
@@ -11,7 +13,11 @@ namespace Area2D {
 		Polygon();
 		
 		// Конструктор з обрахуванням довжини ліній.
-		Polygon(const std::string& name, const Coords* coordsArray, int size);
+		Polygon(
+			const std::string& name, 
+			const Coords* coordsArray, 
+			int size
+		);
 		
 		// Конструктор копіювання.
 		Polygon(const Polygon& other);
@@ -20,12 +26,17 @@ namespace Area2D {
 
 		virtual ~Polygon();
 
+		double* getLine() const;
+
 		// Метод для перевірки координат фігури.
 		void printCoords() const override;
 
 	private:
 		// Приватний метод для виміру відстані між двома координатами.
-		double MeasureDistance(const Coords& first, const Coords& second) const;
+		double MeasureDistance(
+			const Coords& first, 
+			const Coords& second
+		) const;
 	};
 
 }

@@ -128,12 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp" />
+    <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Coords.cpp" />
     <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="ErrorMessage.cpp" />
     <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="Ngon.cpp" />
     <ClCompile Include="Oval.cpp" />
     <ClCompile Include="Polygon.cpp" />
+    <ClCompile Include="Quadrilateral.cpp" />
     <ClCompile Include="Sector.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
@@ -143,9 +147,12 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Coords.h" />
     <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="ErrorMessage.h" />
     <ClInclude Include="Figure.h" />
+    <ClInclude Include="Ngon.h" />
     <ClInclude Include="Oval.h" />
     <ClInclude Include="Polygon.h" />
+    <ClInclude Include="Quadrilateral.h" />
     <ClInclude Include="Sector.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>

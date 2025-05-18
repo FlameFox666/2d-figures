@@ -1,8 +1,10 @@
 #include "Oval.h"
 
-namespace Area2D {
+namespace Area2D 
+{
 
-	Oval::~Oval() {
+	Oval::~Oval() 
+	{
 
 	}
 

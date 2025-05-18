@@ -2,18 +2,22 @@
 #include <iostream>
 #include <cmath>
 
-namespace Area2D {
+namespace Area2D 
+{
 	Polygon::Polygon() : Figure(), lines(nullptr) {}
 
 	Polygon::Polygon(
 		const std::string& name, 
 		const Coords* coordsArray, 
 		int size
-	) : Figure(name, coordsArray, size), lines(nullptr) {
+	) 
+		: Figure(name, coordsArray, size), lines(nullptr) 
+	{
 		if (size < 3) {
-			std::cerr << "Polygon must have at least 3 coordinates.\n";
+			std::cerr << ErrorMessage::POLYGON_LESS_THAN_THREE_COORDINATES;
 			return;
 		}
+
 		if (size > 1) {
 			lines = new double[size];
 			for (int i = 0; i < size; i++) {
@@ -23,7 +27,8 @@ namespace Area2D {
 		}
 	}
 
-	Polygon::Polygon(const Polygon& other) : Figure(other), lines(nullptr) {
+	Polygon::Polygon(const Polygon& other) : Figure(other), lines(nullptr) 
+	{
 		if (other.size > 1) {
 			lines = new double[other.size];
 			for (int i = 0; i < other.size; i++) {
@@ -32,10 +37,12 @@ namespace Area2D {
 		}
 	}
 
-	Polygon& Polygon::operator=(const Polygon& other) {
+	Polygon& Polygon::operator=(const Polygon& other) 
+	{
 		if (this != &other) {
 			Figure::operator=(other);
 			delete[] lines;
+			name = other.name;
 			lines = nullptr;
 			if (other.size > 1) {
 				lines = new double[other.size];
@@ -47,31 +54,38 @@ namespace Area2D {
 		return *this;
 	}
 
-	Polygon::~Polygon() {
+	Polygon::~Polygon() 
+	{
 		delete[] lines;
+	}
+
+	double* Polygon::getLine() const 
+	{
+		return lines;
 	}
 
 	double Polygon::MeasureDistance(
 		const Coords& first, 
-		const Coords& second) const {
+		const Coords& second) const 
+	{
+		constexpr int POWER_OF_TWO = 2;
 		return sqrt(
-			pow(second.x - first.x, 2) +
-			pow(second.y - first.y, 2)
+			pow(second.x - first.x, POWER_OF_TWO) +
+			pow(second.y - first.y, POWER_OF_TWO)
 		);
 	}
 
-	void Polygon::printCoords() const {
-		using std::cout;
-
+	void Polygon::printCoords() const 
+	{
 		if (coords == nullptr) {
-			cout << "No coordinates available.\n";
+			std::cerr << ErrorMessage::UNAVAILABLE_COORDINATES;
 			return;
 		}
 
-		cout << name << "'s coordinates:\n";
+		std::cout << name << "'s coordinates:\n";
 
 		for (int i = 0; i < size; i++) {
-			cout << coords[i] << "\n";
+			std::cout << coords[i] << "\n";
 		}
 	}
 }

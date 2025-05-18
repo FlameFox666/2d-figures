@@ -54,8 +54,8 @@ int main() {
 	using std::cin;
 	using std::endl;
 	
-	Coords coords[3] = {
-		{-1, -1}, {0, 2}, {2, -1}
+	Coords coords[4] = {
+		{-1, -1}, {0, 2}, {2, -1}, {0, 0}
 	};
 
 	//Triangle triangle1;
@@ -67,4 +67,6 @@ int main() {
 	triangle3.printCoords();
 	cout << triangle3.perimeter() << "\n";
 	cout << triangle3.area() << "\n";
+	Triangle triangle4 = triangle3;
+	triangle4.printCoords();
 }

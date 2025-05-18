@@ -1,9 +1,11 @@
 #pragma once
 #include "Figure.h"
 
-namespace Area2D {
+namespace Area2D 
+{
 	
-	class Oval : public Figure {
+	class Oval : public Figure 
+	{
 	protected:
 		short radius;
 

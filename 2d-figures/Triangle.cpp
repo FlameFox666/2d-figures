@@ -1,7 +1,8 @@
 #include "Triangle.h"
 #include <cmath>
 
-namespace Area2D {
+namespace Area2D 
+{
 
     Triangle::Triangle() : Polygon() {}
 
@@ -16,20 +17,25 @@ namespace Area2D {
             new Coords[3]{first, second, third}, 3
         ) {}
 
-    Triangle::Triangle(const std::string name, const Coords* coords) 
+    Triangle::Triangle(const std::string& name, const Coords* coords)
         : Polygon(name, coords, 3) {}
 
-    double Triangle::perimeter() const {
+    double Triangle::perimeter() const 
+    {
         return lines[0] + lines[1] + lines[2];
     }
 
-    double Triangle::area() const {
-        double semiperimeter = this->perimeter() / 2.0;
+    double Triangle::area() const 
+    {
+		constexpr short DIVIDER = 2;
+
+        double semiperimeter = this->perimeter() / DIVIDER;
+        
         return sqrt(
-            semiperimeter * 
-            (semiperimeter - lines[0]) * 
-            (semiperimeter - lines[1]) * 
-            (semiperimeter - lines[2])
+               semiperimeter 
+            * (semiperimeter - lines[0]) 
+            * (semiperimeter - lines[1]) 
+            * (semiperimeter - lines[2])
 		);
     }
 }
