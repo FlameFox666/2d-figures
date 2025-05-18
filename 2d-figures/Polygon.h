@@ -11,8 +11,13 @@ namespace Area2D {
 		Polygon();
 		
 		// Конструктор з обрахуванням довжини ліній.
-		Polygon(const Coords* coordsArray, int count);
+		Polygon(const std::string& name, const Coords* coordsArray, int size);
 		
+		// Конструктор копіювання.
+		Polygon(const Polygon& other);
+
+		Polygon& operator=(const Polygon& other);
+
 		virtual ~Polygon();
 
 		// Метод для перевірки координат фігури.
@@ -24,4 +29,3 @@ namespace Area2D {
 	};
 
 }
-

@@ -10,9 +10,14 @@ namespace Area2D {
 		Triangle();
 
 		// По три точки и массив из трёх точек
-		Triangle(const Coords& first, const Coords& second, const Coords& third);
+		Triangle(
+			const std::string& name, 
+			const Coords& first, 
+			const Coords& second, 
+			const Coords& third
+		);
 
-		Triangle(const Coords* coords);
+		Triangle(const std::string name, const Coords* coords);
 
 		double perimeter() const override;
 

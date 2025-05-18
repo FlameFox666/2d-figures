@@ -1,24 +1,26 @@
 #include "Figure.h"
 
 namespace Area2D {
-	Figure::Figure() : size(1), coords( nullptr ) {}
+	Figure::Figure() : size(0), coords( nullptr ) {}
 
-	Figure::Figure(const Coords* coordsArray, int count) : size(count) {
+	Figure::Figure(
+		const std::string& name, 
+		const Coords* coordsArray, 
+		int size
+	) 
+		: name(name), size(size) {
+
 		coords = new Coords[size];
-		for (int i = 0; i < size; ++i) {
+		for (int i = 0; i < size; i++) {
 			coords[i] = coordsArray[i];
 		}
 	}
 
-	Figure::Figure(const Figure& other) : size(other.size) {
+	Figure::Figure(const Figure& other) : name(other.name), size(other.size) {
 		coords = new Coords[size];
-		for (int i = 0; i < size; ++i) {
+		for (int i = 0; i < size; i++) {
 			coords[i] = other.coords[i];
 		}
-	}
-
-	Figure::~Figure() {
-		delete[] coords;
 	}
 
 	Figure& Figure::operator=(const Figure& other) {
@@ -26,10 +28,22 @@ namespace Area2D {
 			delete[] coords;
 			size = other.size;
 			coords = new Coords[size];
-			for (int i = 0; i < size; ++i) {
+			for (int i = 0; i < size; i++) {
 				coords[i] = other.coords[i];
 			}
 		}
 		return *this;
+	}
+
+	Figure::~Figure() {
+		delete[] coords;
+	}
+
+	std::string Figure::getName() const {
+		return this->name;
+	}
+
+	void Figure::setName(const std::string& name) {
+		this->name = name;
 	}
 }

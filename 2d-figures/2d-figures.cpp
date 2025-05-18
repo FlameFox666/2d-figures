@@ -60,10 +60,11 @@ int main() {
 
 	//Triangle triangle1;
 	//Triangle triangle2({2, 31}, {-4, 1}, {3, -2});
-	Triangle triangle3(coords);
+	Triangle triangle3("abc", coords);
 
 	//triangle1.printCoords();
 	//triangle2.printCoords();
 	triangle3.printCoords();
-	cout << triangle3.perimeter();
+	cout << triangle3.perimeter() << "\n";
+	cout << triangle3.area() << "\n";
 }
