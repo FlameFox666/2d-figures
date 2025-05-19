@@ -11,6 +11,7 @@ namespace Area2D
 	private:
 		static constexpr const char* NAME_PLACEHOLDER = "Figure";
 	protected:
+		static constexpr float DIVIDER = 0.5f;
 		std::string name;
 		Coords* coords;
 		int size;
@@ -22,7 +23,7 @@ namespace Area2D
 		// Конструктор с массивом координат.
 		Figure(
 			const std::string& name, 
-			const Coords* coordsArray, 
+			const Coords* coords_, 
 			int size
 		);
 

@@ -1,2 +1,10 @@
-﻿  Triangle.cpp
+﻿  2d-figures.cpp
+  Circle.cpp
+  Ellipse.cpp
+  Figure.cpp
+  Oval.cpp
+  Polygon.cpp
+  Quadrilateral.cpp
+  Triangle.cpp
+  Создание кода...
   2d-figures.vcxproj -> C:\Users\lexar\source\repos\2d-figures\x64\Debug\2d-figures.exe

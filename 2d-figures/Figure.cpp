@@ -7,7 +7,7 @@ namespace Area2D
 
 	Figure::Figure(
 		const std::string& name, 
-		const Coords* coordsArray, 
+		const Coords* coords_, 
 		int size
 	) 
 		: name(name), size(size) 
@@ -15,7 +15,7 @@ namespace Area2D
 
 		coords = new Coords[size];
 		for (int i = 0; i < size; i++) {
-			coords[i] = coordsArray[i];
+			coords[i] = coords_[i];
 		}
 	}
 

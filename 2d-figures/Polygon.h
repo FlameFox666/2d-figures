@@ -31,8 +31,8 @@ namespace Area2D
 		// Метод для перевірки координат фігури.
 		void printCoords() const override;
 
-	private:
-		// Приватний метод для виміру відстані між двома координатами.
+	protected:
+		// Захищенний метод для виміру відстані між двома координатами.
 		double MeasureDistance(
 			const Coords& first, 
 			const Coords& second

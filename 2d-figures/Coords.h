@@ -40,5 +40,6 @@ namespace Area2D
 		friend std::istream& operator>>(std::istream& is, Coords& point);
 
 		friend class Polygon;
+		friend class Quadrilateral;
 	};
 }

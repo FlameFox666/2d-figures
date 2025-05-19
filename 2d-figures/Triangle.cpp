@@ -17,7 +17,9 @@ namespace Area2D
             new Coords[3]{first, second, third}, 3
         ) {}
 
-    Triangle::Triangle(const std::string& name, const Coords* coords)
+    Triangle::Triangle(
+        const std::string& name, const Coords* coords
+    )
         : Polygon(name, coords, 3) {}
 
     double Triangle::perimeter() const 
@@ -27,9 +29,7 @@ namespace Area2D
 
     double Triangle::area() const 
     {
-		constexpr short DIVIDER = 2;
-
-        double semiperimeter = this->perimeter() / DIVIDER;
+        double semiperimeter = this->perimeter() * DIVIDER;
         
         return sqrt(
                semiperimeter 
