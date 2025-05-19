@@ -53,14 +53,14 @@ int main() {
 	using std::cout;
 	using std::cin;
 	using std::endl;
-	
-	Coords coords[4] = {
-		{-1, -1}, {0, 2}, {2, -1}, {0, 0}
+	/*
+	Coords coords[3] = {
+		{-1, -1}, {0, 2}, {2, -1}
 	};
 
 	//Triangle triangle1;
 	//Triangle triangle2({2, 31}, {-4, 1}, {3, -2});
-	Triangle triangle3("abc", coords);
+	//Triangle triangle3("abc", coords);
 
 	//triangle1.printCoords();
 	//triangle2.printCoords();
@@ -69,4 +69,20 @@ int main() {
 	cout << triangle3.area() << "\n";
 	Triangle triangle4 = triangle3;
 	triangle4.printCoords();
+	*/
+	Quadrilateral quad1;
+	Quadrilateral quad2("Qwer", { 0, 0 }, {1, 0}, {1, 1}, {0, 1});
+	
+	Coords coords[4] = {
+		{-2, 4}, {5, 4}, {5, -3}, {-2, -3}
+	};
+
+	Quadrilateral quad3("Qwer", coords);
+
+	quad1.printCoords();
+	quad2.printCoords();
+	quad3.printCoords();
+	cout << quad1.perimeter() << "\n";
+	cout << quad2.perimeter() << "\n";
+	cout << quad3.perimeter() << "\n";
 }

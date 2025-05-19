@@ -4,7 +4,7 @@
 
 namespace Area2D 
 {
-	// Клас, що представляє точку в 2D просторі.
+	// Точка в 2D просторі.
 	class Coords 
 	{
 	private:

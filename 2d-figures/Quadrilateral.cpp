@@ -1,4 +1,5 @@
 #include "Quadrilateral.h"
+#include <iostream>
 #include <cmath>
 
 namespace Area2D
@@ -33,18 +34,35 @@ namespace Area2D
 	}
 	
 	void Quadrilateral::MeasureDiagonals() {
+		if (coords == nullptr) 
+		{
+			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
+			return;
+		}
 		diagonal[0] = MeasureDistance(coords[0], coords[2]);
 		diagonal[1] = MeasureDistance(coords[1], coords[3]);
 	}
 
 	double Quadrilateral::perimeter() const
 	{
+		if (coords == nullptr)
+		{
+			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		return lines[0] + lines[1] +
 			   lines[2] + lines[3];
 	}
 
 	double Quadrilateral::area() const
 	{
+		if (coords == nullptr)
+		{
+			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		double diagonalScalar = (
 			(coords[2].x - coords[0].x) * (coords[3].x - coords[1].x) +
 			(coords[2].y - coords[0].y) * (coords[3].y - coords[1].y)

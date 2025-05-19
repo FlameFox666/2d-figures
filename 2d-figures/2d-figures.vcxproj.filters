@@ -34,6 +34,12 @@
     <Filter Include="Файлы заголовков\Figure\Oval">
       <UniqueIdentifier>{06547cd9-4f9c-408e-8609-4f3430a2c1ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Area2D\Constant">
+      <UniqueIdentifier>{08c542a7-c852-4554-ad9f-b021fe4a9ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Constant">
+      <UniqueIdentifier>{ce5d8dd1-c69d-47f4-92e1-689544b6c40f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp">
@@ -66,14 +72,17 @@
     <ClCompile Include="Quadrilateral.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
-    <ClCompile Include="ErrorMessage.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Ngon.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
     <ClCompile Include="Canvas.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Error.cpp">
+      <Filter>Исходные файлы\Area2D\Constant</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>Исходные файлы\Area2D\Constant</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,11 +119,14 @@
     <ClInclude Include="Quadrilateral.h">
       <Filter>Файлы заголовков\Figure\Polygon</Filter>
     </ClInclude>
-    <ClInclude Include="ErrorMessage.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Ngon.h">
       <Filter>Файлы заголовков\Figure\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="Error.h">
+      <Filter>Файлы заголовков\Constant</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Файлы заголовков\Constant</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

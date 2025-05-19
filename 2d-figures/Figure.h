@@ -1,17 +1,17 @@
 #pragma once
 #include "Coords.h"
-#include "ErrorMessage.h"
 #include <string>
 
 namespace Area2D 
 {
-	// Базовий абстрактний клас для всіх фігур.
+	// Абстрактний клас для всіх фігур.
 	class Figure 
 	{
 	private:
 		static constexpr const char* NAME_PLACEHOLDER = "Figure";
 	protected:
 		static constexpr float DIVIDER = 0.5f;
+		static constexpr int POWER_OF_TWO = 2;
 		std::string name;
 		Coords* coords;
 		int size;
@@ -37,10 +37,10 @@ namespace Area2D
 		// корректного видалення об'єктів похідних класів.
 		virtual ~Figure();
 
-		// Геттер для отримання назви фігури.
+		// Повертає назву фігури.
 		std::string getName() const;
 		
-		// Сеттер для встановлення назви фігури.
+		// Встановлює назву фігури.
 		void setName(const std::string& name);
 
 		// Чисто віртуальна функція для обчислення периметру.

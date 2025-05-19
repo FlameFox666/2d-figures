@@ -14,7 +14,7 @@ namespace Area2D
 		: Figure(name, coordsArray, size), lines(nullptr) 
 	{
 		if (size < 3) {
-			std::cerr << ErrorMessage::POLYGON_LESS_THAN_THREE_COORDINATES;
+			std::cerr << Constant::Error::POLYGON_LESS_THAN_THREE_COORDINATES;
 			return;
 		}
 
@@ -68,7 +68,6 @@ namespace Area2D
 		const Coords& first, 
 		const Coords& second) const 
 	{
-		constexpr int POWER_OF_TWO = 2;
 		return sqrt(
 			pow(second.x - first.x, POWER_OF_TWO) +
 			pow(second.y - first.y, POWER_OF_TWO)
@@ -78,11 +77,11 @@ namespace Area2D
 	void Polygon::printCoords() const 
 	{
 		if (coords == nullptr) {
-			std::cerr << ErrorMessage::UNAVAILABLE_COORDINATES;
+			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
 			return;
 		}
 
-		std::cout << name << "'s coordinates:\n";
+		std::cout << name << Constant::Message::COORDINATES_PRINT;
 
 		for (int i = 0; i < size; i++) {
 			std::cout << coords[i] << "\n";

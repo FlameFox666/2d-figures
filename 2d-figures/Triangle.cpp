@@ -1,4 +1,5 @@
 #include "Triangle.h"
+#include <iostream>
 #include <cmath>
 
 namespace Area2D 
@@ -24,11 +25,22 @@ namespace Area2D
 
     double Triangle::perimeter() const 
     {
+        if (coords == nullptr)
+        {
+			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
+            return 0.0;
+        }
         return lines[0] + lines[1] + lines[2];
     }
 
     double Triangle::area() const 
     {
+        if (coords == nullptr)
+        {
+            std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
+            return 0.0;
+        }
+
         double semiperimeter = this->perimeter() * DIVIDER;
         
         return sqrt(

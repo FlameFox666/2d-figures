@@ -1,9 +1,12 @@
 #pragma once
 #include "Polygon.h"
+#include "Error.h"
 
 namespace Area2D 
 {
-	// Клас, що описує чотирикутники.
+	// Представляє геометричну фігуру — чотирикутник, представлений
+	// чотирьма координатами. Містить методи для обчислення  
+	// периметру та площі опуклих чотирикутників.
 	class Quadrilateral : public Polygon 
 	{
 	protected:

@@ -1,9 +1,13 @@
 #pragma once
 #include "Polygon.h"
+#include "Error.h"
 
 namespace Area2D 
 {
 	// Клас, що описує трикутник.
+
+	// Представляє геометричну фігуру - трикутник, заданий трьома вершинами.
+	// Містить методи для обчислення периметру та площі трикутника.
 	class Triangle : public Polygon 
 	{
 	public:

@@ -1,9 +1,13 @@
 #pragma once
 #include "Figure.h"
+#include "Error.h"
+#include "Message.h"
 
 namespace Area2D 
 {
-	// Абстрактний клас, що описує фігури з вершинами та сторонами.
+	// Абстрактний клас, що представляє фігури з вершинами
+	// та сторонами. Містить методи для виведення всіх
+	// вершин фігури та довжини його сторін.
 	class Polygon : public Figure 
 	{
 	protected:
@@ -26,13 +30,14 @@ namespace Area2D
 
 		virtual ~Polygon();
 
+		// Повертає масив сторін фігури.
 		double* getLine() const;
 
-		// Метод для перевірки координат фігури.
+		// Виводить координати фігури.
 		void printCoords() const override;
 
 	protected:
-		// Захищенний метод для виміру відстані між двома координатами.
+		// Виміряє відстань між двома координатами.
 		double MeasureDistance(
 			const Coords& first, 
 			const Coords& second
