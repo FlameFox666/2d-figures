@@ -1,6 +1,4 @@
 #include "Triangle.h"
-#include <iostream>
-#include <cmath>
 
 namespace Area2D 
 {
@@ -15,17 +13,22 @@ namespace Area2D
     ) 
         : Polygon(
 			name,
-            new Coords[3]{first, second, third}, 3
+            std::vector<Coords>{first, second, third}
         ) {}
 
     Triangle::Triangle(
-        const std::string& name, const Coords* coords
+        const std::string& name, const std::vector<Coords>& coords
     )
-        : Polygon(name, coords, 3) {}
+        : Polygon(name, coords) {}
+
+    Triangle::Triangle(
+        const std::string& name,
+        const Coords* coords
+    ) : Triangle(name, std::vector<Coords>(coords, coords + 3)) {}
 
     double Triangle::perimeter() const 
     {
-        if (coords == nullptr)
+        if (coords.size() != 3)
         {
 			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
             return 0.0;
@@ -35,13 +38,13 @@ namespace Area2D
 
     double Triangle::area() const 
     {
-        if (coords == nullptr)
+        if (coords.size() != 3)
         {
             std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
             return 0.0;
         }
 
-        double semiperimeter = this->perimeter() * DIVIDER;
+        double semiperimeter = this->perimeter() * Constant::Numberic::DIVIDER;
         
         return sqrt(
                semiperimeter 

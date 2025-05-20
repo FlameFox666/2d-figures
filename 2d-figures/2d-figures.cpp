@@ -70,6 +70,7 @@ int main() {
 	Triangle triangle4 = triangle3;
 	triangle4.printCoords();
 	*/
+	/*
 	Quadrilateral quad1;
 	Quadrilateral quad2("Qwer", { 0, 0 }, {1, 0}, {1, 1}, {0, 1});
 	
@@ -85,4 +86,24 @@ int main() {
 	cout << quad1.perimeter() << "\n";
 	cout << quad2.perimeter() << "\n";
 	cout << quad3.perimeter() << "\n";
+	*/
+
+	
+	Coords coords[3] = {
+		{-1, -1}, {0, 2}, {2, -1}
+	};
+
+	Triangle tri("abc", coords);
+	tri.printCoords();
 }
+
+/*
+	Coords coords[5] = {
+		{0, 0}, {1, 3}, {2, 4}, {3, 3}, {5, 0}
+	};
+	Ngon ngon1;
+	Ngon ngon2("Qwerrt", coords, 5);
+	ngon2.printCoords();
+	cout << ngon2.perimeter() << "\n";
+	cout << ngon2.area();
+*/

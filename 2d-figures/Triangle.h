@@ -1,6 +1,5 @@
 #pragma once
 #include "Polygon.h"
-#include "Error.h"
 
 namespace Area2D 
 {
@@ -22,16 +21,22 @@ namespace Area2D
 			const Coords& third
 		);
 		
-		// Конструктор з передачою координат через масив.
+		// Конструктор з передачою координат через std::vector.
 		Triangle(
 			const std::string& name, 
+			const std::vector<Coords>& coords
+		);
+
+		// Конструктор з передачою координат через звичайний масив.
+		Triangle(
+			const std::string& name,
 			const Coords* coords
 		);
 
-		// Метод для отримання периметру трикутника.
+		// Пошук отримання периметру трикутника.
 		double perimeter() const override;
 
-		// Метод для отримання площі трикутника.
+		// Пошук отримання площі трикутника.
 		double area() const override;
 	};
 }

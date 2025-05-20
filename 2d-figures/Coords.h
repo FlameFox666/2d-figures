@@ -41,5 +41,6 @@ namespace Area2D
 
 		friend class Polygon;
 		friend class Quadrilateral;
+		friend class Ngon;
 	};
 }

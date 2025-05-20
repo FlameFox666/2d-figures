@@ -3,48 +3,14 @@
 namespace Area2D 
 {
 	Figure::Figure() 
-		: name(NAME_PLACEHOLDER), size(0), coords(nullptr) {}
+		: name(Constant::Message::FIGURE_NAME_PLACEHOLDER), 
+		  coords() {}
 
 	Figure::Figure(
 		const std::string& name, 
-		const Coords* coords_, 
-		int size
+		const std::vector<Coords>& coords
 	) 
-		: name(name), size(size) 
-	{
-
-		coords = new Coords[size];
-		for (int i = 0; i < size; i++) {
-			coords[i] = coords_[i];
-		}
-	}
-
-	Figure::Figure(const Figure& other) 
-		: name(other.name), size(other.size) 
-	{
-		coords = new Coords[size];
-		for (int i = 0; i < size; i++) {
-			coords[i] = other.coords[i];
-		}
-	}
-
-	Figure& Figure::operator=(const Figure& other) 
-	{
-		if (this != &other) {
-			delete[] coords;
-			size = other.size;
-			coords = new Coords[size];
-			for (int i = 0; i < size; i++) {
-				coords[i] = other.coords[i];
-			}
-		}
-		return *this;
-	}
-
-	Figure::~Figure() 
-	{
-		delete[] coords;
-	}
+		: name(name), coords(coords) {}
 
 	std::string Figure::getName() const 
 	{

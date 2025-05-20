@@ -1,6 +1,4 @@
 #include "Quadrilateral.h"
-#include <iostream>
-#include <cmath>
 
 namespace Area2D
 {
@@ -18,7 +16,7 @@ namespace Area2D
 	)
 		: Polygon(
 			name,
-			new Coords[4]{ first, second, third, fourth }, 4
+			std::vector<Coords>{ first, second, third, fourth }
 		) 
 	{
 		MeasureDiagonals();
@@ -26,15 +24,15 @@ namespace Area2D
 
 	Quadrilateral::Quadrilateral(
 		const std::string& name,
-		const Coords* coords
+		const std::vector<Coords>& coords
 	) 
-		: Polygon(name, coords, 4) 
+		: Polygon(name, coords) 
 	{
 		MeasureDiagonals();
 	}
 	
 	void Quadrilateral::MeasureDiagonals() {
-		if (coords == nullptr) 
+		if (coords.size() != 4) 
 		{
 			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
 			return;
@@ -45,7 +43,7 @@ namespace Area2D
 
 	double Quadrilateral::perimeter() const
 	{
-		if (coords == nullptr)
+		if (coords.size() != 4)
 		{
 			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
 			return 0.0;
@@ -57,7 +55,7 @@ namespace Area2D
 
 	double Quadrilateral::area() const
 	{
-		if (coords == nullptr)
+		if (coords.size() != 4)
 		{
 			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
 			return 0.0;
@@ -72,6 +70,6 @@ namespace Area2D
 			sqrt(1 - pow(cos((diagonal[0] * diagonal[1]) / diagonalScalar), 2))
 		);
 
-		return diagonal[0] * diagonal[1] * sinus * DIVIDER;
+		return diagonal[0] * diagonal[1] * sinus * Constant::Numberic::DIVIDER;
 	}
 }

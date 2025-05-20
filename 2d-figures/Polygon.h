@@ -2,6 +2,9 @@
 #include "Figure.h"
 #include "Error.h"
 #include "Message.h"
+#include <iostream>
+#include <cmath>
+#include <vector>
 
 namespace Area2D 
 {
@@ -11,7 +14,7 @@ namespace Area2D
 	class Polygon : public Figure 
 	{
 	protected:
-		double* lines;
+		std::vector<double> lines;
 	public:
 		// Конструктор по замовчуванню.
 		Polygon();
@@ -19,19 +22,13 @@ namespace Area2D
 		// Конструктор з обрахуванням довжини ліній.
 		Polygon(
 			const std::string& name, 
-			const Coords* coordsArray, 
-			int size
+			const std::vector<Coords>& coordsArray
 		);
 		
-		// Конструктор копіювання.
-		Polygon(const Polygon& other);
+		virtual ~Polygon() = default;
 
-		Polygon& operator=(const Polygon& other);
-
-		virtual ~Polygon();
-
-		// Повертає масив сторін фігури.
-		double* getLine() const;
+		// Повертає вектор сторін фігури.
+		const std::vector<double>& getLine() const;
 
 		// Виводить координати фігури.
 		void printCoords() const override;

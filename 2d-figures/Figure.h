@@ -1,41 +1,31 @@
 #pragma once
 #include "Coords.h"
 #include <string>
+#include "Message.h"
+#include "Numberic.h"
+#include <vector>
 
 namespace Area2D 
 {
 	// Абстрактний клас для всіх фігур.
 	class Figure 
 	{
-	private:
-		static constexpr const char* NAME_PLACEHOLDER = "Figure";
 	protected:
-		static constexpr float DIVIDER = 0.5f;
-		static constexpr int POWER_OF_TWO = 2;
 		std::string name;
-		Coords* coords;
-		int size;
+		std::vector<Coords> coords;
 
 	public:
 		// Конструктор за замовчуванням.
 		Figure();
-		
-		// Конструктор с массивом координат.
+
+		// Конструктор с вектором координат.
 		Figure(
 			const std::string& name, 
-			const Coords* coords_, 
-			int size
+			const std::vector<Coords>& coords
 		);
 
-		// Конструктор копіювання.
-		Figure(const Figure& other); 
-
-		// Оператор присвоєння.
-		Figure& operator=(const Figure& other);
-
-		// Чисто віртуальний деструктор для 
-		// корректного видалення об'єктів похідних класів.
-		virtual ~Figure();
+		 // Віртуальний деструктор.
+		virtual ~Figure() = default;
 
 		// Повертає назву фігури.
 		std::string getName() const;

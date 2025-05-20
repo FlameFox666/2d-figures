@@ -1,6 +1,5 @@
 #pragma once
 #include "Polygon.h"
-#include "Error.h"
 
 namespace Area2D 
 {
@@ -15,6 +14,7 @@ namespace Area2D
 		// Конструктор за замовчуванням.
 		Quadrilateral();
 
+		// Конструктор з передачею назви та координат поодинично.
 		Quadrilateral(
 			const std::string& name,
 			const Coords& first,
@@ -23,17 +23,17 @@ namespace Area2D
 			const Coords& fourth
 		);
 
+		// Конструктор з передачею назви та вектору координат.
 		Quadrilateral(
 			const std::string& name,
-			const Coords* coords
+			const std::vector<Coords>& coords
 		);
-		
-		// TODO: весь остальной сранный класс.
 
-		// Конструктор з параметрами.
+		// Пошук периметра чотирикутника.
 
 		double perimeter() const override;
 
+		// Пошук площі чотирикутника за діагоналями.
 		double area() const override;
 
 	private:
