@@ -1,10 +1,5 @@
 #pragma once
 #include "Figure.h"
-#include "Error.h"
-#include "Message.h"
-#include <iostream>
-#include <cmath>
-#include <vector>
 
 namespace Area2D 
 {
@@ -15,6 +10,7 @@ namespace Area2D
 	{
 	protected:
 		std::vector<double> lines;
+
 	public:
 		// Конструктор по замовчуванню.
 		Polygon();
@@ -22,7 +18,7 @@ namespace Area2D
 		// Конструктор з обрахуванням довжини ліній.
 		Polygon(
 			const std::string& name, 
-			const std::vector<Coords>& coordsArray
+			const std::vector<Coords>& coords
 		);
 		
 		virtual ~Polygon() = default;

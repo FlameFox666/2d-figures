@@ -21,4 +21,9 @@ namespace Area2D
 	{
 		this->name = name;
 	}
+
+	const std::vector<Coords>& Figure::getCoords() const
+	{
+		return coords;
+	}
 }

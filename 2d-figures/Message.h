@@ -12,6 +12,18 @@ namespace Area2D::Constant
 		static constexpr const char* FIGURE_NAME_PLACEHOLDER = 
 			"Figure";
 
+		static constexpr const char* OVAL_CENTER = 
+			"Center: ";
+
+		static constexpr const char* OVAL_RADIUS =
+			"Radius: ";
+
+		static constexpr const char* OVAL_VERTICAL =
+			"Vertical radius: ";
+
+		static constexpr const char* OVAL_HORIZONTAL =
+			"Horizonal radius: ";
+
 	private:
 		// Чисто віртуальна функція для того, щоб клас був абстрактним.
 		virtual void dummy() = 0;

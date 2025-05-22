@@ -44,7 +44,7 @@ namespace Area2D
             return 0.0;
         }
 
-        double semiperimeter = this->perimeter() * Constant::Numberic::DIVIDER;
+        double semiperimeter = this->perimeter() * Constant::Numberic::DIVIDE_BY_TWO;
         
         return sqrt(
                semiperimeter 

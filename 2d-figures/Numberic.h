@@ -1,15 +1,18 @@
 #pragma once
+#include <cmath>
 
 namespace Area2D::Constant {
 	
 	class Numberic
 	{
 	public:
-		static constexpr float DIVIDER = 0.5f;
+		// Забороняє створення об'єктів цього класу так само, 
+		// наче він абстрактний клас.
+		Numberic() = delete;
+
+		static constexpr float DIVIDE_BY_TWO = 0.5f;
 		static constexpr int POWER_OF_TWO = 2;
-	private:
-		// Чисто віртуальна функція для того, щоб клас був абстрактним.
-		virtual void dummy() = 0;
+		static constexpr double PI = 3.14159265358979323846;
 	};
 
 }

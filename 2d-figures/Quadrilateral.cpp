@@ -30,6 +30,12 @@ namespace Area2D
 	{
 		MeasureDiagonals();
 	}
+
+	Quadrilateral::Quadrilateral(
+		const std::string& name,
+		const Coords* coords
+	) : Quadrilateral(name, std::vector<Coords>(coords, coords + 4)) {}
+
 	
 	void Quadrilateral::MeasureDiagonals() {
 		if (coords.size() != 4) 
@@ -70,6 +76,6 @@ namespace Area2D
 			sqrt(1 - pow(cos((diagonal[0] * diagonal[1]) / diagonalScalar), 2))
 		);
 
-		return diagonal[0] * diagonal[1] * sinus * Constant::Numberic::DIVIDER;
+		return diagonal[0] * diagonal[1] * sinus * Constant::Numberic::DIVIDE_BY_TWO;
 	}
 }

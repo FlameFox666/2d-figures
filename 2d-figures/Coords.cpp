@@ -34,4 +34,12 @@ namespace Area2D
 		return is;
 	}
 
+	bool Coords::operator == (const Coords& other) const
+	{
+		return (x == other.x && y == other.y);
+	}
+
+	bool Coords::operator!=(const Coords& other) const {
+		return !(*this == other);
+	}
 }

@@ -4,6 +4,16 @@
   Figure.cpp
   Ngon.cpp
   Oval.cpp
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(18,23): warning C4244: =: преобразование "double" в "_Ty", возможна потеря данных
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(18,23): warning C4244:         with
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(18,23): warning C4244:         [
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(18,23): warning C4244:             _Ty=short
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(18,23): warning C4244:         ]
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(23,23): warning C4244: =: преобразование "double" в "_Ty", возможна потеря данных
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(23,23): warning C4244:         with
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(23,23): warning C4244:         [
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(23,23): warning C4244:             _Ty=short
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Oval.cpp(23,23): warning C4244:         ]
   Polygon.cpp
   Quadrilateral.cpp
   Triangle.cpp

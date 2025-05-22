@@ -1,9 +1,12 @@
 #pragma once
 #include "Coords.h"
-#include <string>
+#include "Error.h"
 #include "Message.h"
 #include "Numberic.h"
+#include <iostream>
+#include <string>
 #include <vector>
+#include <cmath>
 
 namespace Area2D 
 {
@@ -24,12 +27,15 @@ namespace Area2D
 			const std::vector<Coords>& coords
 		);
 
-		 // Віртуальний деструктор.
+		// Віртуальний деструктор.
 		virtual ~Figure() = default;
 
 		// Повертає назву фігури.
 		std::string getName() const;
 		
+		// Повертає вектор координат фігури.
+		const std::vector<Coords>& getCoords() const;
+
 		// Встановлює назву фігури.
 		void setName(const std::string& name);
 
@@ -41,6 +47,13 @@ namespace Area2D
 	
 		// Чисто віртуальна функція для відображення координат фігури.
 		virtual void printCoords() const = 0;
+	
+	protected:
+		// Перетворює дані в цілі числа. Служить для 
+		// скорочення коду та його читабельності.
+		template<typename T>
+		int toInt(T value) const {
+			return static_cast<int>(value);
+		}
 	};
 }
-

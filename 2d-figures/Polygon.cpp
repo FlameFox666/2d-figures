@@ -6,23 +6,23 @@ namespace Area2D
 
 	Polygon::Polygon(
 		const std::string& name, 
-		const std::vector<Coords>& coordsArray
+		const std::vector<Coords>& coords
 	) 
-		: Figure(name, coordsArray), lines() 
+		: Figure(name, coords), lines() 
 	{
-		if (coordsArray.size() < 3) 
+		if (coords.size() < 3) 
 		{
 			std::cerr << Constant::Error::POLYGON_LESS_THAN_THREE_COORDINATES;
 			return;
 		}
 
-		if (coords.size() > 1) 
+		if (this->coords.size() > 1) 
 		{
-			lines.resize(coords.size());
-			for (size_t i = 0; i < coords.size(); i++) 
+			lines.resize(this->coords.size());
+			for (size_t i = 0; i < this->coords.size(); i++)
 			{
-				size_t j = (i + 1) % coords.size();
-				lines[i] = MeasureDistance(coords[i], coords[j]);
+				size_t j = (i + 1) % this->coords.size();
+				lines[i] = MeasureDistance(this->coords[i], this->coords[j]);
 			}
 		}
 	}

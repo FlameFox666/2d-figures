@@ -1,18 +1,35 @@
 #pragma once
 #include "Figure.h"
+#include <array>
 
 namespace Area2D 
 {
-	
+	// Абстрактний клас, що представляє округлі фігури.
+	// Містить методи для виведення всіх
 	class Oval : public Figure 
 	{
 	protected:
-		short radius;
+		std::array<short, 2> radius;
 
+		enum class CoordsIndex 
+		{
+			CENTER, HORIZONTAL_RADIUS, VERTICAL_RADIUS
+		};
 	public:
-		virtual ~Oval();
+		Oval();
 
+		Oval(
+			const std::string& name,
+			const std::vector<Coords>& coords
+		);
 
+		virtual ~Oval() = default;
+
+		// Передає координати центру та радіус.
+		const std::array<short, 2>& getRadius() const;
+
+		// Виводить координати центра та перпендикулярного радіусу.
+		void printCoords() const override;
 	};
 }
 

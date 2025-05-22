@@ -78,12 +78,6 @@
     <ClCompile Include="Canvas.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Error.cpp">
-      <Filter>Исходные файлы\Area2D\Constant</Filter>
-    </ClCompile>
-    <ClCompile Include="Message.cpp">
-      <Filter>Исходные файлы\Area2D\Constant</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h">
@@ -126,6 +120,9 @@
       <Filter>Файлы заголовков\Constant</Filter>
     </ClInclude>
     <ClInclude Include="Message.h">
+      <Filter>Файлы заголовков\Constant</Filter>
+    </ClInclude>
+    <ClInclude Include="Numberic.h">
       <Filter>Файлы заголовков\Constant</Filter>
     </ClInclude>
   </ItemGroup>

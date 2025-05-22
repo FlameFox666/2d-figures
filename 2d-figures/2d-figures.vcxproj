@@ -133,9 +133,7 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Coords.cpp" />
     <ClCompile Include="Ellipse.cpp" />
-    <ClCompile Include="Error.cpp" />
     <ClCompile Include="Figure.cpp" />
-    <ClCompile Include="Message.cpp" />
     <ClCompile Include="Ngon.cpp" />
     <ClCompile Include="Oval.cpp" />
     <ClCompile Include="Polygon.cpp" />
@@ -153,6 +151,7 @@
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="Ngon.h" />
+    <ClInclude Include="Numberic.h" />
     <ClInclude Include="Oval.h" />
     <ClInclude Include="Polygon.h" />
     <ClInclude Include="Quadrilateral.h" />

@@ -17,6 +17,13 @@ namespace Area2D
 			const std::vector<Coords>& coords
 		);
 
+		// Конструктор з передачою координат через звичайний масив.
+		Ngon(
+			const std::string& name,
+			const Coords* coords,
+			int size
+		);
+
 		// Пошук периметру багатокутника.
 		double perimeter() const override;
 

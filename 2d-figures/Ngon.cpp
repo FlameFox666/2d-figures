@@ -17,6 +17,13 @@ namespace Area2D
 		}
 	}
 
+	Ngon::Ngon(
+		const std::string& name,
+		const Coords* coords,
+		int size
+	) : Ngon(name, std::vector<Coords>(coords, coords + size)) {}
+
+
 	double Ngon::perimeter() const
 	{
 		if (coords.size() < 5) 
@@ -26,9 +33,9 @@ namespace Area2D
 		}
 		
 		double res = 0.0;
-		for (double l : lines)
+		for (double i : lines)
 		{
-			res += l;
+			res += i;
 		}
 		return res;
 	}
@@ -42,14 +49,15 @@ namespace Area2D
 		}
 
 		double res = 0.0;
-		size_t n = coords.size();
-		for (size_t i = 0; i < n; i++)
+		size_t size = coords.size();
+		for (size_t i = 0; i < size; i++)
 		{
 			const Coords& coordsFirst  = coords[i];
-			const Coords& coordsSecond = coords[(i + 1) % n];
-			res += coordsFirst.x * coordsSecond.y - coordsSecond.x * coordsFirst.y;
+			const Coords& coordsSecond = coords[(i + 1) % size];
+			res += coordsFirst.x  * coordsSecond.y - 
+				   coordsSecond.x * coordsFirst.y;
 		}
 
-		return std::abs(res) * DIVIDER;
+		return std::abs(res) * Constant::Numberic::DIVIDE_BY_TWO;
 	}
 }

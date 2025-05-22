@@ -29,8 +29,13 @@ namespace Area2D
 			const std::vector<Coords>& coords
 		);
 
-		// Пошук периметра чотирикутника.
+		// Конструктор з передачою координат через звичайний масив.
+		Quadrilateral(
+			const std::string& name,
+			const Coords* coords
+		);
 
+		// Пошук периметра чотирикутника.
 		double perimeter() const override;
 
 		// Пошук площі чотирикутника за діагоналями.

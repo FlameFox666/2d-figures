@@ -39,8 +39,14 @@ namespace Area2D
 		// у вигляді двох значень типу double.
 		friend std::istream& operator>>(std::istream& is, Coords& point);
 
+		bool operator==(const Coords& other) const;
+
+		bool operator!=(const Coords& other) const;
+
 		friend class Polygon;
 		friend class Quadrilateral;
 		friend class Ngon;
+
+		friend class Oval;
 	};
 }

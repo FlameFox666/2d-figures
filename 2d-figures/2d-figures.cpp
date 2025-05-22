@@ -95,7 +95,9 @@ int main() {
 
 	Triangle tri("abc", coords);
 	tri.printCoords();
+	cout << tri.getCoords()[1];
 }
+// TODO: доработать Circle + Sector
 
 /*
 	Coords coords[5] = {
