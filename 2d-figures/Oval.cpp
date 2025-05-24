@@ -16,7 +16,7 @@ namespace Area2D
 			return;
 		}
 		radius[0] = std::abs(
-			coords[toInt((CoordsIndex::HORIZONTAL_RADIUS))].x - 
+			coords[toInt((CoordsIndex::HORIZONTAL_RADIUS))].x -
 			coords[toInt((CoordsIndex::CENTER))].x
 		);
 
@@ -27,7 +27,7 @@ namespace Area2D
 
 	}
 
-	const std::array<short, 2>& Oval::getRadius() const
+	const std::array<double, 2>& Oval::getRadius() const
 	{
 		return radius;
 	}

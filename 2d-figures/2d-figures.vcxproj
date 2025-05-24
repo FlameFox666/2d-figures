@@ -131,8 +131,10 @@
     <ClCompile Include="2d-figures.cpp" />
     <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="CircleSector.cpp" />
     <ClCompile Include="Coords.cpp" />
     <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="EllipseSector.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Ngon.cpp" />
     <ClCompile Include="Oval.cpp" />
@@ -145,8 +147,10 @@
     <ClInclude Include="Area2D.h" />
     <ClInclude Include="Canvas.h" />
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="CircleSector.h" />
     <ClInclude Include="Coords.h" />
     <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="EllipseSector.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Message.h" />

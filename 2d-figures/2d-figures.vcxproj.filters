@@ -78,6 +78,12 @@
     <ClCompile Include="Canvas.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="CircleSector.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
+    </ClCompile>
+    <ClCompile Include="EllipseSector.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h">
@@ -124,6 +130,12 @@
     </ClInclude>
     <ClInclude Include="Numberic.h">
       <Filter>Файлы заголовков\Constant</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleSector.h">
+      <Filter>Файлы заголовков\Figure\Oval</Filter>
+    </ClInclude>
+    <ClInclude Include="EllipseSector.h">
+      <Filter>Файлы заголовков\Figure\Oval</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -6,6 +6,8 @@ namespace Area2D::Constant
 	class Message
 	{
 	public:
+		Message() = delete;
+
 		static constexpr const char* COORDINATES_PRINT = 
 			"'s coordinates:\n";
 
@@ -23,9 +25,5 @@ namespace Area2D::Constant
 
 		static constexpr const char* OVAL_HORIZONTAL =
 			"Horizonal radius: ";
-
-	private:
-		// Чисто віртуальна функція для того, щоб клас був абстрактним.
-		virtual void dummy() = 0;
 	};
 }

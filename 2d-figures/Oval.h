@@ -5,11 +5,11 @@
 namespace Area2D 
 {
 	// Абстрактний клас, що представляє округлі фігури.
-	// Містить методи для виведення всіх
+	// Містить методи для виведення всіх радіусів фігури.
 	class Oval : public Figure 
 	{
 	protected:
-		std::array<short, 2> radius;
+		std::array<double, 2> radius;
 
 		enum class CoordsIndex 
 		{
@@ -26,7 +26,7 @@ namespace Area2D
 		virtual ~Oval() = default;
 
 		// Передає координати центру та радіус.
-		const std::array<short, 2>& getRadius() const;
+		const std::array<double, 2>& getRadius() const;
 
 		// Виводить координати центра та перпендикулярного радіусу.
 		void printCoords() const override;
