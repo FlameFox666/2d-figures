@@ -1,11 +1,19 @@
 ﻿  2d-figures.cpp
   Circle.cpp
+  CircleSector.cpp
+C:\Users\lexar\source\repos\2d-figures\2d-figures\CircleSector.cpp(81,3): warning C4809: в операторе switch имеется ненужная метка "default"; все возможные метки "case" уже заданы
+C:\Users\lexar\source\repos\2d-figures\2d-figures\CircleSector.cpp(94,3): warning C4809: в операторе switch имеется ненужная метка "default"; все возможные метки "case" уже заданы
   Ellipse.cpp
+  EllipseSector.cpp
+C:\Users\lexar\source\repos\2d-figures\2d-figures\EllipseSector.cpp(85,3): warning C4809: в операторе switch имеется ненужная метка "default"; все возможные метки "case" уже заданы
+C:\Users\lexar\source\repos\2d-figures\2d-figures\EllipseSector.cpp(98,3): warning C4809: в операторе switch имеется ненужная метка "default"; все возможные метки "case" уже заданы
   Figure.cpp
   Ngon.cpp
   Oval.cpp
   Polygon.cpp
   Quadrilateral.cpp
+  Sector.cpp
+C:\Users\lexar\source\repos\2d-figures\2d-figures\Sector.cpp(34,17): warning C4244: return: преобразование "double" в "int", возможна потеря данных
   Triangle.cpp
   Создание кода...
   2d-figures.vcxproj -> C:\Users\lexar\source\repos\2d-figures\x64\Debug\2d-figures.exe

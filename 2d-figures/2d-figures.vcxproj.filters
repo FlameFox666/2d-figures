@@ -34,9 +34,6 @@
     <Filter Include="Файлы заголовков\Figure\Oval">
       <UniqueIdentifier>{06547cd9-4f9c-408e-8609-4f3430a2c1ad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Area2D\Constant">
-      <UniqueIdentifier>{08c542a7-c852-4554-ad9f-b021fe4a9ca1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Файлы заголовков\Constant">
       <UniqueIdentifier>{ce5d8dd1-c69d-47f4-92e1-689544b6c40f}</UniqueIdentifier>
     </Filter>
