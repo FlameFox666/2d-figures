@@ -9,14 +9,14 @@ namespace Area2D
 	// Містить методи для переведення радіан у градуса та навпаки.
 	class Sector 
 	{
-	protected:
-		enum class Measure 
-		{ 
-			RADIAN, 
+	public:
+		enum class Measure
+		{
+			RADIAN,
 			DEGREE
 		};
-
-		static inline bool measure = static_cast<int>(Measure::DEGREE);
+	protected:
+		static inline Measure measure = Measure::DEGREE;
 		double radian;
 		int degree;
 
@@ -43,10 +43,9 @@ namespace Area2D
 		int radianToDegree() const;
 		
 		// Змінює градусну міру. 
-		static void setMeasure(Measure value) 
-		{
-			measure = static_cast<int>(value);
-		}
+		static void setMeasure(Measure value);
+
+		static Measure getMeasure();
 	};
 
 }

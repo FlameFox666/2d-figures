@@ -72,9 +72,18 @@ namespace Area2D
 			(coords[2].y - coords[0].y) * (coords[3].y - coords[1].y)
 		);
 
-		double sinus = sin(
-			sqrt(1 - pow(cos((diagonal[0] * diagonal[1]) / diagonalScalar), 2))
-		);
+		double cosTheta = diagonalScalar / (diagonal[0] * diagonal[1]);
+
+		if (cosTheta < -1.0) 
+		{
+			cosTheta = -1.0;
+		}
+		else if (cosTheta > 1.0) 
+		{
+			cosTheta = 1.0;
+		}
+
+		double sinus = sqrt(1 - cosTheta * cosTheta);
 
 		return diagonal[0] * diagonal[1] * sinus * Constant::Numberic::DIVIDE_BY_TWO;
 	}

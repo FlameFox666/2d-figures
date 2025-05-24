@@ -33,4 +33,14 @@ namespace Area2D
 	{
 		return radian * (180.0 / Constant::Numberic::PI);
 	}
+
+	void Sector::setMeasure(Measure value)
+	{
+		measure = value;
+	}
+
+	Sector::Measure Sector::getMeasure()
+	{
+		return measure;
+	}
 }

@@ -76,9 +76,9 @@ namespace Area2D
 	{
 		switch (measure)
 		{
-		case static_cast<int>(Measure::DEGREE):
+		case Measure::DEGREE:
 			return degreePerimeter();
-		case static_cast<int>(Measure::RADIAN):
+		case Measure::RADIAN:
 			return radianPerimeter();
 		default:
 			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);
@@ -89,9 +89,9 @@ namespace Area2D
 	{
 		switch (measure)
 		{
-		case static_cast<int>(Measure::DEGREE):
+		case Measure::DEGREE:
 			return degreeArea();
-		case static_cast<int>(Measure::RADIAN):
+		case Measure::RADIAN:
 			return radianArea();
 		default:
 			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);

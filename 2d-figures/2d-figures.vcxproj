@@ -129,7 +129,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp" />
-    <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="CircleSector.cpp" />
     <ClCompile Include="Coords.cpp" />
@@ -145,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Area2D.h" />
-    <ClInclude Include="Canvas.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="CircleSector.h" />
     <ClInclude Include="Coords.h" />

@@ -72,9 +72,6 @@
     <ClCompile Include="Ngon.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
-    <ClCompile Include="Canvas.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="CircleSector.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
@@ -83,9 +80,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Canvas.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Coords.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>

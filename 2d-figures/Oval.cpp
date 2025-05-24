@@ -15,6 +15,21 @@ namespace Area2D
 			std::cerr << Constant::Error::OVAL_INVALID_COORDINATES;
 			return;
 		}
+
+		Coords center = coords[toInt(CoordsIndex::CENTER)];
+		Coords horizontalRadius = coords[toInt(CoordsIndex::HORIZONTAL_RADIUS)];
+		Coords verticalRadius = coords[toInt(CoordsIndex::VERTICAL_RADIUS)];
+
+		radius[0] = sqrt(
+			pow((horizontalRadius.x - center.x), 2) + 
+			pow((horizontalRadius.y - center.y), 2)
+		);
+		
+		radius[1] = sqrt(
+			pow((verticalRadius.x - center.x), 2) +
+			pow((verticalRadius.y - center.y), 2)
+		);
+		/*
 		radius[0] = std::abs(
 			coords[toInt((CoordsIndex::HORIZONTAL_RADIUS))].x -
 			coords[toInt((CoordsIndex::CENTER))].x
@@ -24,7 +39,7 @@ namespace Area2D
 			coords[toInt((CoordsIndex::VERTICAL_RADIUS))].y - 
 			coords[toInt((CoordsIndex::CENTER))].y
 		);
-
+		*/
 	}
 
 	const std::array<double, 2>& Oval::getRadius() const

@@ -63,6 +63,9 @@ namespace Area2D
 		// Повертає координати.
 		using Ellipse::getCoords;
 
+		// Повертає координати еліпсу.
+		using Ellipse::printCoords;
+
 	private:
 		// Вимірює периметр сектора еліпса в градусах.
 		// Формула: 2 * sqrt((горизонт.r^2  + верт.r^2 ) / 2) + 

@@ -64,17 +64,16 @@ namespace Area2D
 
 	double CircleSector::radianArea() const
 	{
-		return static_cast<double>(degree) / Constant::Numberic::FULL_CIRCLE *
-			Constant::Numberic::PI * radius[0] * radius[0];
+		return radian * radius[0] * radius[0] * Constant::Numberic::DIVIDE_BY_TWO;
 	}
 
 	double CircleSector::perimeter() const
 	{
-		switch (measure)
+		switch (Sector::getMeasure())
 		{
-		case static_cast<int>(Measure::DEGREE):
+		case Sector::Measure::DEGREE:
 			return degreePerimeter();
-		case static_cast<int>(Measure::RADIAN):
+		case Sector::Measure::RADIAN:
 			return radianPerimeter();
 		default:
 			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);
@@ -83,11 +82,11 @@ namespace Area2D
 
 	double CircleSector::area() const
 	{
-		switch (measure)
+		switch (Sector::getMeasure())
 		{
-		case static_cast<int>(Measure::DEGREE):
+		case Sector::Measure::DEGREE:
 			return degreeArea();
-		case static_cast<int>(Measure::RADIAN):
+		case Sector::Measure::RADIAN:
 			return radianArea();
 		default:
 			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);
