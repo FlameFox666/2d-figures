@@ -1,5 +1,8 @@
 #include "CircleSector.h"
 
+using Area2D::Constant::Error;
+using Area2D::Constant::Numberic;
+
 namespace Area2D
 {
 	CircleSector::CircleSector() : Circle(), Sector() {}
@@ -46,50 +49,56 @@ namespace Area2D
 
 	double CircleSector::degreePerimeter() const
 	{
-		return 2 * radius[0] + 
-			(static_cast<double>(degree) / Constant::Numberic::FULL_CIRCLE) * 
-			(2 * Constant::Numberic::PI * radius[0]);
+		return Numberic::RADIUS_COUNT * radius[0] +
+			  (static_cast<double>(degree) / Numberic::FULL_CIRCLE) *
+			  (Numberic::RADIUS_COUNT * Numberic::PI * radius[0]);
 	}
 
 	double CircleSector::radianPerimeter() const
 	{
-		return 2 * radius[0] + radius[0] * radian;
+		return Numberic::RADIUS_COUNT * radius[0] + radius[0] * radian;
 	}
 
 	double CircleSector::degreeArea() const
 	{
-		return (static_cast<double>(degree) / Constant::Numberic::FULL_CIRCLE) * 
-			Constant::Numberic::PI * radius[0] * radius[0];
+		return (static_cast<double>(degree) / Numberic::FULL_CIRCLE) * 
+			Numberic::PI * radius[0] * radius[0];
 	}
 
 	double CircleSector::radianArea() const
 	{
-		return radian * radius[0] * radius[0] * Constant::Numberic::DIVIDE_BY_TWO;
+		return radian * radius[0] * radius[0] * Numberic::DIVIDE_BY_TWO;
 	}
 
 	double CircleSector::perimeter() const
 	{
-		switch (Sector::getMeasure())
+		if (degree > -1)
 		{
-		case Sector::Measure::DEGREE:
 			return degreePerimeter();
-		case Sector::Measure::RADIAN:
+		}
+		else if (radian > -1.0)
+		{
 			return radianPerimeter();
-		default:
-			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);
+		}
+		else
+		{
+			throw std::invalid_argument(Error::SECTOR_IVALID_ANGLE);
 		}
 	}
 
 	double CircleSector::area() const
 	{
-		switch (Sector::getMeasure())
+		if (degree > -1)
 		{
-		case Sector::Measure::DEGREE:
 			return degreeArea();
-		case Sector::Measure::RADIAN:
+		}
+		else if (radian > -1.0)
+		{
 			return radianArea();
-		default:
-			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);
+		}
+		else
+		{
+			throw std::invalid_argument(Error::SECTOR_IVALID_ANGLE);
 		}
 	}
 

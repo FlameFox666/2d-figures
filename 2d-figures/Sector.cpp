@@ -1,46 +1,35 @@
 #include "Sector.h"
 
+using Area2D::Constant::Error;
+
 namespace Area2D 
 {
-	Sector::Sector() : degree(0), radian(0.0) {}
+	Sector::Sector() : degree(-1), radian(-1.0) {}
 
-	Sector::Sector(double radian) : radian(radian) 
+	Sector::Sector(double radian) : radian(radian), degree(-1) 
 	{
-		degree = radianToDegree();
+		if (radian <= 0.0) {
+			throw std::invalid_argument(Error::SECTOR_IVALID_ANGLE);
+		}
 	}
 
-	Sector::Sector(int degree) : degree(degree) 
+	Sector::Sector(int degree) : degree(degree), radian(-1.0)
 	{
-		radian = degreeToRadian();
+		if (degree <= 0) {
+			throw std::invalid_argument(Error::SECTOR_IVALID_ANGLE);
+		}
 	}
 
-	double Sector::getRadian() const
+	double Sector::getAngle() const
 	{
-		return radian;
-	}
-
-	int Sector::getDegree() const
-	{
-		return degree;
-	}
-
-	double Sector::degreeToRadian() const 
-	{
-		return degree * (Constant::Numberic::PI / 180.0);
-	}
-
-	int Sector::radianToDegree() const 
-	{
-		return radian * (180.0 / Constant::Numberic::PI);
-	}
-
-	void Sector::setMeasure(Measure value)
-	{
-		measure = value;
-	}
-
-	Sector::Measure Sector::getMeasure()
-	{
-		return measure;
+		if (degree > -1)
+		{
+			return degree;
+		}
+		else if (radian > -1.0)
+		{
+			return radian;
+		}
+		return 0.0;
 	}
 }

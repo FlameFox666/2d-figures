@@ -2,21 +2,18 @@
 #include "Numberic.h"
 #include "Error.h"
 
-
 namespace Area2D 
 {
 	// Абстрактний клас представляє сектор овальних фігур.
 	// Містить методи для переведення радіан у градуса та навпаки.
+
+	// Абстрактний базовий клас для всіх секторів 2D геометричних 
+	// овальних фігур.
+	// Містить віртуальні методи для обчислення периметру, площі 
+	// та відображення координат фігури.
 	class Sector 
 	{
-	public:
-		enum class Measure
-		{
-			RADIAN,
-			DEGREE
-		};
 	protected:
-		static inline Measure measure = Measure::DEGREE;
 		double radian;
 		int degree;
 
@@ -30,22 +27,7 @@ namespace Area2D
 		// Конструктор, що приймає градус як градусну міру.
 		Sector(int degree);
 
-		// Повертає радіану.
-		double getRadian() const;
-
-		// Повертає градус.
-		int getDegree() const;
-
-		// Повертає радіану у градусах.
-		double degreeToRadian() const;
-
-		// Повертає градус у радіанах.
-		int radianToDegree() const;
-		
-		// Змінює градусну міру. 
-		static void setMeasure(Measure value);
-
-		static Measure getMeasure();
+		// Повертає кут.
+		double getAngle() const;
 	};
-
 }

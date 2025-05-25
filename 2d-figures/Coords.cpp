@@ -6,6 +6,8 @@ namespace Area2D
 
 	Coords::Coords(double x, double y) : x(x), y(y) {}
 
+	Coords::~Coords() {}
+
 	double Coords::getX() const {
 		return x;
 	}

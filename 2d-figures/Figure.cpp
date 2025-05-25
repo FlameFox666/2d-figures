@@ -1,9 +1,12 @@
 #include "Figure.h"
 
+using Area2D::Constant::Message;
+
 namespace Area2D 
 {
+
 	Figure::Figure() 
-		: name(Constant::Message::FIGURE_NAME_PLACEHOLDER), 
+		: name(Message::FIGURE_NAME_PLACEHOLDER), 
 		  coords() {}
 
 	Figure::Figure(

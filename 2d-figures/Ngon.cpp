@@ -1,5 +1,8 @@
 #include "Ngon.h"
 
+using Area2D::Constant::Error;
+using Area2D::Constant::Numberic;
+
 namespace Area2D 
 {
 	Ngon::Ngon() : Polygon() {}
@@ -10,10 +13,10 @@ namespace Area2D
 	) 
 		: Polygon(name, coords) 
 	{
-		if (coords.size() < 5) {
-			std::cerr << Constant::Error::NGON_LESS_THAN_FIVE_COORDINATES;
-			this->coords.clear();
-			return;
+		if (coords.size() < Numberic::MINIMAL_NGON_VERTICES) {
+			throw std::invalid_argument(
+				Error::NGON_LESS_THAN_FIVE_COORDINATES
+			);
 		}
 	}
 
@@ -21,31 +24,36 @@ namespace Area2D
 		const std::string& name,
 		const Coords* coords,
 		int size
-	) : Ngon(name, std::vector<Coords>(coords, coords + size)) {}
+	) 
+		: Ngon(name, std::vector<Coords>(coords, coords + size)) {}
 
 
 	double Ngon::perimeter() const
 	{
-		if (coords.size() < 5) 
+		if (coords.size() < Numberic::MINIMAL_NGON_VERTICES)
 		{
-			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
-			return 0.0;
+			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
 		}
 		
-		double res = 0.0;
-		for (double i : lines)
+		double result = 0.0;
+		for (double line : lines)
 		{
-			res += i;
+			result += line;
 		}
-		return res;
+
+		if (result <= 0)
+		{
+			throw std::logic_error(Error::DEGENERADE_POLYGON);
+		}
+
+		return result;
 	}
 
 	double Ngon::area() const
 	{
-		if (coords.size() < 5)
+		if (coords.size() < Numberic::MINIMAL_NGON_VERTICES)
 		{
-			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
-			return 0.0;
+			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
 		}
 
 		double res = 0.0;
@@ -58,6 +66,13 @@ namespace Area2D
 				   coordsSecond.x * coordsFirst.y;
 		}
 
-		return std::abs(res) * Constant::Numberic::DIVIDE_BY_TWO;
+		double result = std::abs(res) * Numberic::DIVIDE_BY_TWO;
+
+		if (result <= 0)
+		{
+			throw std::logic_error(Error::DEGENERADE_POLYGON);
+		}
+
+		return result;
 	}
 }

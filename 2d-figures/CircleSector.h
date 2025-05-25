@@ -4,16 +4,23 @@
 
 namespace Area2D
 {
+	// Клас представляє геометричну фігуру: сектор кола, заданий центром, 
+	// радіусом та кутом сектора.
+	// Містить методи для обчислення довижини окружності та площі сектора кола.
 	class CircleSector : protected Circle, private Sector
 	{
 	public:
-
+		// Конструктор за замовчуванням.
 		CircleSector();
 
+		// Конструктор з передачою початкового кола та кута у радіанах.
 		CircleSector(const Circle circle, double radian);
 
+		// Конструктор з передачою початкового кола та кута у градусах.
 		CircleSector(const Circle circle, int degree);
 
+		// Конструктор з передачою координат центра кола, 
+		// радіуса та кута у радіанах.
 		CircleSector(
 			const std::string& name,
 			const Coords& center,
@@ -21,6 +28,8 @@ namespace Area2D
 			double radian
 		);
 
+		// Конструктор з передачою координат центра кола, 
+		// радіуса та кута у градусах.
 		CircleSector(
 			const std::string& name,
 			const Coords& center,
@@ -28,29 +37,30 @@ namespace Area2D
 			int degree
 		);
 
+		// Конструктор з передачою координат через std::vector, 
+		// та кута у радіанах.
 		CircleSector(
 			const std::string& name,
 			const std::vector<Coords>& coords,
 			double radian
 		);
 
+		// Конструктор з передачою координат через std::vector, 
+		// та кута у градусах.
 		CircleSector(
 			const std::string& name,
 			const std::vector<Coords>& coords,
 			int degree
 		);
 
-		// Пошук отримання довжини окружності сектора кола.
+		// Обчислення периметра сектора кола.
 		double perimeter() const override;
 
-		// Пошук отримання площі сектора кола.
+		// Обчислення площі сектора кола.
 		double area() const override;
 
-		// Повертає радіану.
-		using Sector::getRadian;
-
-		// Повертає градус.
-		using Sector::getDegree;
+		// Повертає кут.
+		using Sector::getAngle;
 
 		// Повертає назву фігури.
 		using Circle::getName;
@@ -65,19 +75,19 @@ namespace Area2D
 		using Circle::printCoords;
 	
 	private:
-		// Вимірює периметр сектора кола в градусах.
+		// Обчислення периметра сектора кола у градусах.
 		// Формула: 2r * кут/360 * 2PI * r
 		double degreePerimeter() const;
 
-		// Вимірює периметр сектора кола в радіанах.
+		// Обчислення периметра сектора кола у радіанах.
 		// Формула: 2r + r * кут
 		double radianPerimeter() const;
 
-		// Вимірює площу сектора кола в градусах.
+		// Обчислення площі сектора кола у градусах.
 		// Формула: кут/360 * PI * r^2
 		double degreeArea() const;
 
-		// Вимірює площу сектора кола в радіанах.
+		// Обчислення площі сектора кола у радіанах.
 		// Формула: 1/2 * r^2 * кут
 		double radianArea() const;
 	};

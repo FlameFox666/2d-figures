@@ -1,5 +1,9 @@
 #include "Polygon.h"
 
+using Area2D::Constant::Error;
+using Area2D::Constant::Message;
+using Area2D::Constant::Numberic;
+
 namespace Area2D 
 {
 	Polygon::Polygon() : Figure(), lines() {}
@@ -10,10 +14,11 @@ namespace Area2D
 	) 
 		: Figure(name, coords), lines() 
 	{
-		if (coords.size() < 3) 
+		if (coords.size() < Numberic::MINIMAL_POLYGON_VERTICES)
 		{
-			std::cerr << Constant::Error::POLYGON_LESS_THAN_THREE_COORDINATES;
-			return;
+			throw std::invalid_argument(
+				Error::POLYGON_LESS_THAN_THREE_COORDINATES
+			);
 		}
 
 		if (this->coords.size() > 1) 
@@ -34,11 +39,12 @@ namespace Area2D
 
 	double Polygon::MeasureDistance(
 		const Coords& first, 
-		const Coords& second) const 
+		const Coords& second
+	) const 
 	{
 		return sqrt(
-			pow(second.x - first.x, Constant::Numberic::POWER_OF_TWO) +
-			pow(second.y - first.y, Constant::Numberic::POWER_OF_TWO)
+			pow(second.x - first.x, Numberic::POWER_OF_TWO) +
+			pow(second.y - first.y, Numberic::POWER_OF_TWO)
 		);
 	}
 
@@ -46,15 +52,21 @@ namespace Area2D
 	{
 		if (coords.empty()) 
 		{
-			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
-			return;
+			throw std::invalid_argument(
+				Error::UNAVAILABLE_COORDINATES
+			);
 		}
 
-		std::cout << name << Constant::Message::COORDINATES_PRINT;
+		std::cout << name << Message::COORDINATES_PRINT;
 
-		for (const auto& i : coords) 
+		for (const auto& coord : coords)
 		{
-			std::cout << i << "\n";
+			std::cout << coord << "\n";
 		}
+	}
+
+	double Polygon::operator[](size_t index) const
+	{
+		return lines[index];
 	}
 }

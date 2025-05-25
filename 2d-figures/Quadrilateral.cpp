@@ -1,5 +1,8 @@
 #include "Quadrilateral.h"
 
+using Area2D::Constant::Error;
+using Area2D::Constant::Numberic;
+
 namespace Area2D
 {
 	Quadrilateral::Quadrilateral() : Polygon() 
@@ -34,37 +37,44 @@ namespace Area2D
 	Quadrilateral::Quadrilateral(
 		const std::string& name,
 		const Coords* coords
-	) : Quadrilateral(name, std::vector<Coords>(coords, coords + 4)) {}
+	) 
+		: Quadrilateral(name, std::vector<Coords>(coords, coords + 4)) {}
 
 	
 	void Quadrilateral::MeasureDiagonals() {
-		if (coords.size() != 4) 
+		if (coords.size() != Numberic::QUADRILATERAL_VERTEX_COUNT) 
 		{
-			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
-			return;
+			throw std::invalid_argument(
+				Error::UNAVAILABLE_COORDINATES
+			);
 		}
+
 		diagonal[0] = MeasureDistance(coords[0], coords[2]);
 		diagonal[1] = MeasureDistance(coords[1], coords[3]);
 	}
 
 	double Quadrilateral::perimeter() const
 	{
-		if (coords.size() != 4)
+		if (coords.size() != Numberic::QUADRILATERAL_VERTEX_COUNT)
 		{
-			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
-			return 0.0;
+			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
 		}
 
-		return lines[0] + lines[1] +
-			   lines[2] + lines[3];
+		double result = lines[0] + lines[1] + lines[2] + lines[3];
+
+		if (result <= 0)
+		{
+			throw std::logic_error(Error::DEGENERADE_POLYGON);
+		}
+
+		return result;
 	}
 
 	double Quadrilateral::area() const
 	{
-		if (coords.size() != 4)
+		if (coords.size() != Numberic::QUADRILATERAL_VERTEX_COUNT)
 		{
-			std::cerr << Constant::Error::UNAVAILABLE_COORDINATES;
-			return 0.0;
+			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
 		}
 
 		double diagonalScalar = (
@@ -85,6 +95,14 @@ namespace Area2D
 
 		double sinus = sqrt(1 - cosTheta * cosTheta);
 
-		return diagonal[0] * diagonal[1] * sinus * Constant::Numberic::DIVIDE_BY_TWO;
+		double result = diagonal[0] * diagonal[1] * 
+						sinus * Constant::Numberic::DIVIDE_BY_TWO;
+
+		if (result <= 0)
+		{
+			throw std::logic_error(Error::DEGENERADE_POLYGON);
+		}
+
+		return result;
 	}
 }

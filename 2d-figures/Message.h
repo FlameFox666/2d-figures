@@ -8,11 +8,11 @@ namespace Area2D::Constant
 	public:
 		Message() = delete;
 
-		static constexpr const char* COORDINATES_PRINT = 
-			"'s coordinates:\n";
-
 		static constexpr const char* FIGURE_NAME_PLACEHOLDER = 
 			"Figure";
+
+		static constexpr const char* COORDINATES_PRINT = 
+			"'s coordinates:\n";
 
 		static constexpr const char* OVAL_CENTER = 
 			"Center: ";

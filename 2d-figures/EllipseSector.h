@@ -4,16 +4,24 @@
 
 namespace Area2D
 {
+	// Клас представляє геометричну фігуру: сектор еліпса, заданий центром, 
+	// радіусами самої вузької частини фігури та самої широкої частини 
+	// та кутом сектора.
+	// Містить методи для обчислення довижини окружності та площі сектора еліпса.
 	class EllipseSector : protected Ellipse, private Sector
 	{
 	public:
-
+		// Конструктор за замовчуванням.
 		EllipseSector();
 
+		// Конструктор з передачою початкового еліпса та кута у радіанах.
 		EllipseSector(const Ellipse ellipse, double radian);
 
+		// Конструктор з передачою початкового еліпса та кута у градусах.
 		EllipseSector(const Ellipse ellipse, int degree);
 
+		// Конструктор з передачою координат центра еліпса, 
+		// радіуса та кута у радіанах.
 		EllipseSector(
 			const std::string& name,
 			const Coords& center,
@@ -22,6 +30,8 @@ namespace Area2D
 			double radian
 		);
 
+		// Конструктор з передачою координат центра еліпса, 
+		// радіуса та кута у градусах.
 		EllipseSector(
 			const std::string& name,
 			const Coords& center,
@@ -30,29 +40,30 @@ namespace Area2D
 			int degree
 		);
 
+		// Конструктор з передачою координат через std::vector, 
+		// та кута у радіанах.
 		EllipseSector(
 			const std::string& name,
 			const std::vector<Coords>& coords,
 			double radian
 		);
 
+		// Конструктор з передачою координат через std::vector, 
+		// та кута у градусах.
 		EllipseSector(
 			const std::string& name,
 			const std::vector<Coords>& coords,
 			int degree
 		);
 
-		// Пошук отримання довжини окружності сектора еліпса.
+		// Обчислення периметра сектора еліпса.
 		double perimeter() const override;
 
-		// Пошук отримання площі сектора еліпса.
+		// Обчислення площі сектора еліпса.
 		double area() const override;
 
-		// Повертає радіану.
-		using Sector::getRadian;
-
-		// Повертає градус.
-		using Sector::getDegree;
+		// Повертає кут.
+		using Sector::getAngle;
 
 		// Повертає назву фігури.
 		using Ellipse::getName;
@@ -67,22 +78,22 @@ namespace Area2D
 		using Ellipse::printCoords;
 
 	private:
-		// Вимірює периметр сектора еліпса в градусах.
-		// Формула: 2 * sqrt((горизонт.r^2  + верт.r^2 ) / 2) + 
-		//			кут / 360 * периметр
+		// Обчислення периметра сектора еліпса у градусах.
+		// Формула: P = 2 * sqrt((a^2  + b^2 ) / 2) + 
+		//			    кут / 360 * P еліпса
 		double degreePerimeter() const;
 
-		// Вимірює периметр сектора еліпса в радіанах.
-		// Формула: 2 * sqrt((горизонт.r^2  + верт.r^2) / 2) + 
-		//			кут / 2PI * периметр
+		// Обчислення периметра сектора еліпса у радіанах.
+		// Формула: P = 2 * sqrt((a^2  + b^2) / 2) + 
+		//			    кут / 2PI * P еліпса
 		double radianPerimeter() const;
 
-		// Вимірює площу сектора еліпса в градусах.
-		// Формула: (2PI * r1 * r2 * кут) / 360
+		// Обчислення площі сектора еліпса у градусах.
+		// Формула: S = (2PI * r1 * r2 * кут) / 360
 		double degreeArea() const;
 
-		// Вимірює площу сектора еліпса в радіанах.
-		// Формула: 0.5 * r1 * r2 * кут
+		// Обчислення площі сектора еліпса у радіанах.
+		// Формула: S = (r1 * r2 * кут) / 2
 		double radianArea() const;
 	};
 }

@@ -1,5 +1,8 @@
 #include "Circle.h"
 
+using Area2D::Constant::Error;
+using Area2D::Constant::Numberic;
+
 namespace Area2D 
 {
 	Circle::Circle() : Oval() {}
@@ -17,20 +20,22 @@ namespace Area2D
 	Circle::Circle(
 		const std::string& name,
 		const std::vector<Coords>& coords
-	) : Oval(name, coords) {}
+	) 
+		: Oval(name, coords) {}
 
 	Circle::Circle(
 		const std::string& name,
 		const Coords* coords
-	) : Circle(name, std::vector<Coords>{coords[0], coords[1], coords[1]}) {}
+	) 
+		: Circle(name, std::vector<Coords>{coords[0], coords[1], coords[1]}) {}
 
 	double Circle::perimeter() const
 	{
-		return 2 * Constant::Numberic::PI * radius[0];
+		return Numberic::TWO_PI * radius[0];
 	}
 
 	double Circle::area() const
 	{
-		return Constant::Numberic::PI * radius[0] * radius[0];
+		return Numberic::PI * radius[0] * radius[0];
 	}
 }

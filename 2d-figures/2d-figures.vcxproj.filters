@@ -25,24 +25,24 @@
     <Filter Include="Исходные файлы\Area2D\Figure\Oval">
       <UniqueIdentifier>{b7c75556-f0e8-45af-9a7e-40a3bf6c1a6d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Figure">
+    <Filter Include="Файлы заголовков\Area2D">
+      <UniqueIdentifier>{9ad21e1f-ccb4-40ea-8fe4-f67d9becc5a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Area2D\Figure">
       <UniqueIdentifier>{1179875b-d2f3-4f09-a9af-4810ea724f50}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Figure\Polygon">
+    <Filter Include="Файлы заголовков\Area2D\Figure\Polygon">
       <UniqueIdentifier>{bd3fdf86-2364-4ab9-af8f-2a47b5995601}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Figure\Oval">
+    <Filter Include="Файлы заголовков\Area2D\Figure\Oval">
       <UniqueIdentifier>{06547cd9-4f9c-408e-8609-4f3430a2c1ad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Constant">
+    <Filter Include="Файлы заголовков\Area2D\Constant">
       <UniqueIdentifier>{ce5d8dd1-c69d-47f4-92e1-689544b6c40f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Coords.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Oval.cpp">
@@ -78,55 +78,58 @@
     <ClCompile Include="EllipseSector.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
+    <ClCompile Include="Coords.cpp">
+      <Filter>Исходные файлы\Area2D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Coords.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Oval.h">
-      <Filter>Файлы заголовков\Figure\Oval</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
     <ClInclude Include="Polygon.h">
-      <Filter>Файлы заголовков\Figure\Polygon</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Файлы заголовков\Figure\Polygon</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
     <ClInclude Include="Ellipse.h">
-      <Filter>Файлы заголовков\Figure\Oval</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
     <ClInclude Include="Circle.h">
-      <Filter>Файлы заголовков\Figure\Oval</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
     <ClInclude Include="Sector.h">
-      <Filter>Файлы заголовков\Figure\Oval</Filter>
-    </ClInclude>
-    <ClInclude Include="Area2D.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
     <ClInclude Include="Figure.h">
-      <Filter>Файлы заголовков\Figure</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure</Filter>
     </ClInclude>
     <ClInclude Include="Quadrilateral.h">
-      <Filter>Файлы заголовков\Figure\Polygon</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
     <ClInclude Include="Ngon.h">
-      <Filter>Файлы заголовков\Figure\Polygon</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
     <ClInclude Include="Error.h">
-      <Filter>Файлы заголовков\Constant</Filter>
+      <Filter>Файлы заголовков\Area2D\Constant</Filter>
     </ClInclude>
     <ClInclude Include="Message.h">
-      <Filter>Файлы заголовков\Constant</Filter>
+      <Filter>Файлы заголовков\Area2D\Constant</Filter>
     </ClInclude>
     <ClInclude Include="Numberic.h">
-      <Filter>Файлы заголовков\Constant</Filter>
+      <Filter>Файлы заголовков\Area2D\Constant</Filter>
     </ClInclude>
     <ClInclude Include="CircleSector.h">
-      <Filter>Файлы заголовков\Figure\Oval</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
     <ClInclude Include="EllipseSector.h">
-      <Filter>Файлы заголовков\Figure\Oval</Filter>
+      <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
+    </ClInclude>
+    <ClInclude Include="Coords.h">
+      <Filter>Файлы заголовков\Area2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Area2D.h">
+      <Filter>Файлы заголовков\Area2D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

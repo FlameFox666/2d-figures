@@ -1,5 +1,8 @@
 #include "EllipseSector.h"
 
+using Area2D::Constant::Error;
+using Area2D::Constant::Numberic;
+
 namespace Area2D
 {
 	EllipseSector::EllipseSector() : Ellipse(), Sector() {}
@@ -48,53 +51,66 @@ namespace Area2D
 
 	double EllipseSector::degreePerimeter() const
 	{
-		return 2 * sqrt( ( pow( radius[0], 2 ) + pow( radius[1], 2 ) ) / 2 ) +
-			   static_cast<double>(degree) / Constant::Numberic::FULL_CIRCLE *
-			   Ellipse::perimeter();
+		double squareRoot = sqrt(
+			(pow(radius[0], Numberic::POWER_OF_TWO)  +
+			 pow(radius[1], Numberic::POWER_OF_TWO)) * Numberic::DIVIDE_BY_TWO
+		);
+
+		return Numberic::RADIUS_COUNT * squareRoot + static_cast<double>(degree) / 
+			   Numberic::FULL_CIRCLE * Ellipse::perimeter();
 	}
 
 	double EllipseSector::radianPerimeter() const
 	{
-		return 2 * sqrt( ( pow( radius[0], 2 ) + pow( radius[1], 2 ) ) / 2 ) +
-			   Constant::Numberic::PI / Constant::Numberic::FULL_CIRCLE *
-			   Ellipse::perimeter();
+		double squareRoot = sqrt(
+			(pow(radius[0], Numberic::POWER_OF_TWO)  + 
+			 pow(radius[1], Numberic::POWER_OF_TWO)) * Numberic::DIVIDE_BY_TWO
+		);
+
+		return Numberic::RADIUS_COUNT * squareRoot + 
+			   (radian / (Numberic::TWO_PI)) * Ellipse::perimeter();
 	}
 
 	double EllipseSector::degreeArea() const
 	{
-		return (2 * Constant::Numberic::PI * radius[0] * radius[1] * degree) / 
-			   Constant::Numberic::FULL_CIRCLE;
+		return (Numberic::TWO_PI * radius[0] * radius[1] * degree) /
+			   Numberic::FULL_CIRCLE;
 	}
 
 	double EllipseSector::radianArea() const
 	{
-		return Constant::Numberic::DIVIDE_BY_TWO * 
-			   radius[0] * radius[1] * radian;
+		return Numberic::DIVIDE_BY_TWO *  radius[0] * radius[1] * radian;
 	}
 
 	double EllipseSector::perimeter() const
 	{
-		switch (measure)
+		if (degree > -1)
 		{
-		case Measure::DEGREE:
 			return degreePerimeter();
-		case Measure::RADIAN:
+		}
+		else if (radian > -1.0)
+		{
 			return radianPerimeter();
-		default:
-			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);
+		}
+		else
+		{
+			throw std::invalid_argument(Error::SECTOR_IVALID_ANGLE);
 		}
 	}
 
 	double EllipseSector::area() const
 	{
-		switch (measure)
+		if (degree > -1)
 		{
-		case Measure::DEGREE:
 			return degreeArea();
-		case Measure::RADIAN:
+		}
+		else if (radian > -1.0)
+		{
 			return radianArea();
-		default:
-			throw std::invalid_argument(Constant::Error::SECTOR_IVALID_MEASURE_TYPE);
+		}
+		else
+		{
+			throw std::invalid_argument(Error::SECTOR_IVALID_ANGLE);
 		}
 	}
 

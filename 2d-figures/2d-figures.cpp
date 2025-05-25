@@ -88,36 +88,46 @@ int main() {
 	cout << quad3.perimeter() << "\n";
 	*/
 
-	
 	Coords coords[] = {
 		{0.0, 0.0},
-		{7.0, 7.0}
+		{1.0, 1.0},
+		{2.0, 2.0},
+		{3.0, 2.0},
+		{4.0, 0.0}
 	};
-	
-	Circle circle("a", coords);
-	CircleSector figure(circle, 2.0);
+
+	Ngon figure("abcd", coords, 5);
+	cout << figure[1];
 	figure.printCoords();
-	for (auto& r : figure.getRadius()) {
-		cout << "radius: " << r << "\n";
+	for (auto& l : figure.getLine()) {
+		cout << l << "\n";
+	}
+	cout << figure.perimeter() << "\n";
+	cout << figure.area() << "\n";
+	
+	
+}
+
+/*
+	Ngon figure("abcd", coords, 5);
+	figure.printCoords();
+	for (auto& l : figure.getLine()) {
+		cout << l << "\n";
 	}
 	cout << figure.perimeter() << "\n";
 	cout << figure.area() << "\n";
 
-	CircleSector figure2(circle, 2);
-	figure2.printCoords();
-	for (auto& r : figure2.getRadius()) {
-		cout << "radius: " << r << "\n";
-	}
-	cout << figure2.perimeter() << "\n";
-	cout << figure2.area() << "\n";
-}
-// TODO: доработать Circle + Sector
+	Coords coords[] = {
+		{0.0, 0.0},
+		{4.0, 0.0},
+		{0.0, 3.0}
+	};
 
-/*
-	* Ngon figure("abcd", coords, 5);
+	Ellipse ellipse("a", coords);
+	EllipseSector figure(ellipse, 2.00);
 	figure.printCoords();
-	for (auto& l : figure.getLine()) {
-		cout << l << "\n";
+	for (auto& r : figure.getRadius()) {
+		cout << "radius: " << r << "\n";
 	}
 	cout << figure.perimeter() << "\n";
 	cout << figure.area() << "\n";
