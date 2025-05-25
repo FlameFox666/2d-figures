@@ -1,4 +1,4 @@
-#include "Ngon.h"
+#include "Figure/Polygon/Ngon.h"
 
 using Area2D::Constant::Error;
 using Area2D::Constant::Numberic;

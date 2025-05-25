@@ -45,91 +45,91 @@
     <ClCompile Include="2d-figures.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Oval.cpp">
+    <ClCompile Include="Area2D\src\Figure\Oval\Circle.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
-    </ClCompile>
-    <ClCompile Include="Polygon.cpp">
-      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
-    </ClCompile>
-    <ClCompile Include="Ellipse.cpp">
+    <ClCompile Include="Area2D\src\Figure\Oval\CircleSector.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
-    <ClCompile Include="Circle.cpp">
+    <ClCompile Include="Area2D\src\Coords.cpp">
+      <Filter>Исходные файлы\Area2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Area2D\src\Figure\Oval\Ellipse.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
-    <ClCompile Include="Sector.cpp">
+    <ClCompile Include="Area2D\src\Figure\Oval\EllipseSector.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
-    <ClCompile Include="Figure.cpp">
+    <ClCompile Include="Area2D\src\Figure\Figure.cpp">
       <Filter>Исходные файлы\Area2D\Figure</Filter>
     </ClCompile>
-    <ClCompile Include="Quadrilateral.cpp">
+    <ClCompile Include="Area2D\src\Figure\Polygon\Ngon.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
-    <ClCompile Include="Ngon.cpp">
+    <ClCompile Include="Area2D\src\Figure\Oval\Oval.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
+    </ClCompile>
+    <ClCompile Include="Area2D\src\Figure\Polygon\Polygon.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
-    <ClCompile Include="CircleSector.cpp">
+    <ClCompile Include="Area2D\src\Figure\Polygon\Quadrilateral.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
+    </ClCompile>
+    <ClCompile Include="Area2D\src\Figure\Oval\Sector.cpp">
       <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
     </ClCompile>
-    <ClCompile Include="EllipseSector.cpp">
-      <Filter>Исходные файлы\Area2D\Figure\Oval</Filter>
-    </ClCompile>
-    <ClCompile Include="Coords.cpp">
-      <Filter>Исходные файлы\Area2D</Filter>
+    <ClCompile Include="Area2D\src\Figure\Polygon\Triangle.cpp">
+      <Filter>Исходные файлы\Area2D\Figure\Polygon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Oval.h">
+    <ClInclude Include="Area2D\include\Area2D.h">
+      <Filter>Файлы заголовков\Area2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Area2D\include\Coords.h">
+      <Filter>Файлы заголовков\Area2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Area2D\include\Figure\Oval\Circle.h">
       <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
-    <ClInclude Include="Polygon.h">
-      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
-    </ClInclude>
-    <ClInclude Include="Triangle.h">
-      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
-    </ClInclude>
-    <ClInclude Include="Ellipse.h">
+    <ClInclude Include="Area2D\include\Figure\Oval\CircleSector.h">
       <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
-    <ClInclude Include="Circle.h">
+    <ClInclude Include="Area2D\include\Figure\Oval\Ellipse.h">
       <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
-    <ClInclude Include="Sector.h">
+    <ClInclude Include="Area2D\include\Figure\Oval\EllipseSector.h">
       <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
-    <ClInclude Include="Figure.h">
+    <ClInclude Include="Area2D\include\Constant\Message.h">
+      <Filter>Файлы заголовков\Area2D\Constant</Filter>
+    </ClInclude>
+    <ClInclude Include="Area2D\include\Constant\Error.h">
+      <Filter>Файлы заголовков\Area2D\Constant</Filter>
+    </ClInclude>
+    <ClInclude Include="Area2D\include\Figure\Figure.h">
       <Filter>Файлы заголовков\Area2D\Figure</Filter>
     </ClInclude>
-    <ClInclude Include="Quadrilateral.h">
+    <ClInclude Include="Area2D\include\Figure\Polygon\Ngon.h">
       <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
-    <ClInclude Include="Ngon.h">
+    <ClInclude Include="Area2D\include\Figure\Polygon\Polygon.h">
       <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
-    <ClInclude Include="Error.h">
-      <Filter>Файлы заголовков\Area2D\Constant</Filter>
+    <ClInclude Include="Area2D\include\Figure\Polygon\Quadrilateral.h">
+      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
-    <ClInclude Include="Message.h">
-      <Filter>Файлы заголовков\Area2D\Constant</Filter>
+    <ClInclude Include="Area2D\include\Figure\Polygon\Triangle.h">
+      <Filter>Файлы заголовков\Area2D\Figure\Polygon</Filter>
     </ClInclude>
-    <ClInclude Include="Numberic.h">
-      <Filter>Файлы заголовков\Area2D\Constant</Filter>
-    </ClInclude>
-    <ClInclude Include="CircleSector.h">
+    <ClInclude Include="Area2D\include\Figure\Oval\Sector.h">
       <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
-    <ClInclude Include="EllipseSector.h">
+    <ClInclude Include="Area2D\include\Figure\Oval\Oval.h">
       <Filter>Файлы заголовков\Area2D\Figure\Oval</Filter>
     </ClInclude>
-    <ClInclude Include="Coords.h">
-      <Filter>Файлы заголовков\Area2D</Filter>
-    </ClInclude>
-    <ClInclude Include="Area2D.h">
-      <Filter>Файлы заголовков\Area2D</Filter>
+    <ClInclude Include="Area2D\include\Constant\Numberic.h">
+      <Filter>Файлы заголовков\Area2D\Constant</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

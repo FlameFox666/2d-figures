@@ -1,4 +1,4 @@
-#include "Polygon.h"
+#include "Figure/Polygon/Polygon.h"
 
 using Area2D::Constant::Error;
 using Area2D::Constant::Message;

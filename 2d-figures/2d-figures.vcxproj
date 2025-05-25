@@ -76,6 +76,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Area2D\include
+</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,6 +107,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)Area2D\include
+</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,36 +133,36 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2d-figures.cpp" />
-    <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="CircleSector.cpp" />
-    <ClCompile Include="Coords.cpp" />
-    <ClCompile Include="Ellipse.cpp" />
-    <ClCompile Include="EllipseSector.cpp" />
-    <ClCompile Include="Figure.cpp" />
-    <ClCompile Include="Ngon.cpp" />
-    <ClCompile Include="Oval.cpp" />
-    <ClCompile Include="Polygon.cpp" />
-    <ClCompile Include="Quadrilateral.cpp" />
-    <ClCompile Include="Sector.cpp" />
-    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="Area2D\src\Coords.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Figure.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Oval\Circle.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Oval\CircleSector.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Oval\Ellipse.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Oval\EllipseSector.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Oval\Oval.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Oval\Sector.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Polygon\Ngon.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Polygon\Polygon.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Polygon\Quadrilateral.cpp" />
+    <ClCompile Include="Area2D\src\Figure\Polygon\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Area2D.h" />
-    <ClInclude Include="Circle.h" />
-    <ClInclude Include="CircleSector.h" />
-    <ClInclude Include="Coords.h" />
-    <ClInclude Include="Ellipse.h" />
-    <ClInclude Include="EllipseSector.h" />
-    <ClInclude Include="Error.h" />
-    <ClInclude Include="Figure.h" />
-    <ClInclude Include="Message.h" />
-    <ClInclude Include="Ngon.h" />
-    <ClInclude Include="Numberic.h" />
-    <ClInclude Include="Oval.h" />
-    <ClInclude Include="Polygon.h" />
-    <ClInclude Include="Quadrilateral.h" />
-    <ClInclude Include="Sector.h" />
-    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Area2D\include\Area2D.h" />
+    <ClInclude Include="Area2D\include\Constant\Error.h" />
+    <ClInclude Include="Area2D\include\Constant\Message.h" />
+    <ClInclude Include="Area2D\include\Constant\Numberic.h" />
+    <ClInclude Include="Area2D\include\Coords.h" />
+    <ClInclude Include="Area2D\include\Figure\Figure.h" />
+    <ClInclude Include="Area2D\include\Figure\Oval\Circle.h" />
+    <ClInclude Include="Area2D\include\Figure\Oval\CircleSector.h" />
+    <ClInclude Include="Area2D\include\Figure\Oval\Ellipse.h" />
+    <ClInclude Include="Area2D\include\Figure\Oval\EllipseSector.h" />
+    <ClInclude Include="Area2D\include\Figure\Oval\Oval.h" />
+    <ClInclude Include="Area2D\include\Figure\Oval\Sector.h" />
+    <ClInclude Include="Area2D\include\Figure\Polygon\Ngon.h" />
+    <ClInclude Include="Area2D\include\Figure\Polygon\Polygon.h" />
+    <ClInclude Include="Area2D\include\Figure\Polygon\Quadrilateral.h" />
+    <ClInclude Include="Area2D\include\Figure\Polygon\Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

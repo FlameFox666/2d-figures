@@ -1,4 +1,4 @@
-#include "EllipseSector.h"
+#include "Figure/Oval/EllipseSector.h"
 
 using Area2D::Constant::Error;
 using Area2D::Constant::Numberic;

@@ -1,8 +1,8 @@
 #pragma once
 #include "Coords.h"
-#include "Error.h"
-#include "Message.h"
-#include "Numberic.h"
+#include "Constant/Error.h"
+#include "Constant/Message.h"
+#include "Constant/Numberic.h"
 #include <iostream>
 #include <string>
 #include <vector>

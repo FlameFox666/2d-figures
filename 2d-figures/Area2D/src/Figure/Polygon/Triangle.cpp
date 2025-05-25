@@ -1,4 +1,4 @@
-#include "Triangle.h"
+#include "Figure/Polygon/Triangle.h"
 
 using Area2D::Constant::Error;
 using Area2D::Constant::Numberic;

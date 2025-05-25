@@ -1,4 +1,4 @@
-#include "CircleSector.h"
+#include "Figure/Oval/CircleSector.h"
 
 using Area2D::Constant::Error;
 using Area2D::Constant::Numberic;

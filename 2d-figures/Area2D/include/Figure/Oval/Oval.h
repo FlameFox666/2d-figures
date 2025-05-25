@@ -1,5 +1,5 @@
 #pragma once
-#include "Figure.h"
+#include "../Figure.h"
 #include <array>
 
 namespace Area2D 

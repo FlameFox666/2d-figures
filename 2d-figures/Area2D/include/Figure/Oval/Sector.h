@@ -1,6 +1,6 @@
 #pragma once
-#include "Numberic.h"
-#include "Error.h"
+#include "Constant/Numberic.h"
+#include "Constant/Error.h"
 
 namespace Area2D 
 {
