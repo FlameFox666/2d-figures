@@ -32,6 +32,11 @@ namespace Area2D
 
 	double Ellipse::perimeter() const 
 	{
+		if (coords.empty()) {
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		double segment = (
 			Numberic::RAMANUJAN_APPROX_COEFF * (radius[0] + radius[1]) - 
 			sqrt(
@@ -45,6 +50,31 @@ namespace Area2D
 	
 	double Ellipse::area() const 
 	{
+		if (coords.empty()) {
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		return Numberic::PI * radius[0] * radius[1];
+	}
+
+	void Ellipse::setCoords(const std::vector<Coords>& ñoords)
+	{
+		if (coords.size() != Numberic::MINIMAL_OVAL_COORDINATES)
+		{
+			std::cerr << Error::OVAL_INVALID_COORDINATES;
+			return;
+		}
+		Figure::setCoords(coords);
+	}
+
+	void Ellipse::setCoords(const Coords* coords, size_t size)
+	{
+		if (size != Numberic::MINIMAL_OVAL_COORDINATES)
+		{
+			std::cerr << Error::OVAL_INVALID_COORDINATES;
+			return;
+		}
+		Figure::setCoords(coords, size);
 	}
 }

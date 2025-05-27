@@ -35,5 +35,9 @@ namespace Area2D
 		// Формула: формула Гаусса 
 		// S = 0.5 * |сума (x[i] * y[i+1] - x[i+1] * y[i]) для всіх i|.
 		double area() const override;
+
+		// Перевантаження встановлення координат для багатокутника.
+		void setCoords(const std::vector<Coords>& сoords) override;
+		void setCoords(const Coords* coords, size_t size) override;
 	};
 }

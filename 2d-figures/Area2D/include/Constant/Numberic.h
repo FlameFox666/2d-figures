@@ -20,6 +20,7 @@ namespace Area2D::Constant {
 		static constexpr double TWO_PI = 6.28318530717958647692;
 		
 		static constexpr size_t MINIMAL_POLYGON_VERTICES = 3;
+		static constexpr size_t MINIMAL_CIRCLE_COORDINATES = 2;
 		static constexpr size_t MINIMAL_OVAL_COORDINATES = 3;
 		static constexpr size_t MINIMAL_NGON_VERTICES = 5;
 		static constexpr size_t TRIANGLE_VERTEX_COUNT = 3;

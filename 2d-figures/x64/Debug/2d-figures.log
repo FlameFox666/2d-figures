@@ -1,15 +1,7 @@
-﻿  2d-figures.cpp
-  Figure.cpp
-  Circle.cpp
+﻿  Circle.cpp
   CircleSector.cpp
   Ellipse.cpp
   EllipseSector.cpp
-  Oval.cpp
-  Sector.cpp
-  Ngon.cpp
-  Polygon.cpp
-  Quadrilateral.cpp
   Triangle.cpp
   Создание кода...
-  LINK : не найден или не выполнена сборка C:\Users\lexar\source\repos\2d-figures\x64\Debug\2d-figures.exe при последней инкрементной компоновке; выполняется полная компоновка
   2d-figures.vcxproj -> C:\Users\lexar\source\repos\2d-figures\x64\Debug\2d-figures.exe

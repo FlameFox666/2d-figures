@@ -43,6 +43,10 @@ namespace Area2D
 		// Формула: S = (d1 * d2 * sin()) / 2
 		double area() const override;
 
+		// Перевантаження встановлення координат для чотирикутника.
+		void setCoords(const std::vector<Coords>& сoords) override;
+		void setCoords(const Coords* coords, size_t size) override;
+
 	private:
 		// Приватний метод, що обраховує довжини діагоналей.
 		// Використовує Polygon::MeasureDistance() для скорочення повторення

@@ -32,7 +32,8 @@ namespace Area2D
 	{
 		if (coords.size() < Numberic::MINIMAL_NGON_VERTICES)
 		{
-			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
 		}
 		
 		double result = 0.0;
@@ -43,7 +44,8 @@ namespace Area2D
 
 		if (result <= 0)
 		{
-			throw std::logic_error(Error::DEGENERADE_POLYGON);
+			std::cerr << Error::DEGENERADE_POLYGON;
+			return 0.0;
 		}
 
 		return result;
@@ -53,7 +55,9 @@ namespace Area2D
 	{
 		if (coords.size() < Numberic::MINIMAL_NGON_VERTICES)
 		{
-			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+			//throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
 		}
 
 		double res = 0.0;
@@ -70,9 +74,30 @@ namespace Area2D
 
 		if (result <= 0)
 		{
-			throw std::logic_error(Error::DEGENERADE_POLYGON);
+			std::cerr << Error::DEGENERADE_POLYGON;
+			return 0.0;
 		}
 
 		return result;
+	}
+
+	void Ngon::setCoords(const std::vector<Coords>& ñoords)
+	{
+		if (coords.size() != Numberic::MINIMAL_NGON_VERTICES)
+		{
+			std::cerr << Error::NGON_LESS_THAN_FIVE_COORDINATES;
+			return;
+		}
+		Figure::setCoords(coords);
+	}
+
+	void Ngon::setCoords(const Coords* coords, size_t size)
+	{
+		if (size <= Numberic::MINIMAL_NGON_VERTICES)
+		{
+			std::cerr << Error::NGON_LESS_THAN_FIVE_COORDINATES;
+			return;
+		}
+		Figure::setCoords(coords, size);
 	}
 }

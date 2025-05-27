@@ -31,11 +31,41 @@ namespace Area2D
 
 	double Circle::perimeter() const
 	{
+		if (coords.empty()) {
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		return Numberic::TWO_PI * radius[0];
 	}
 
 	double Circle::area() const
 	{
+		if (coords.empty()) {
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		return Numberic::PI * radius[0] * radius[0];
+	}
+
+	void Circle::setCoords(const std::vector<Coords>& ñoords)
+	{
+		if (coords.size() != Numberic::MINIMAL_CIRCLE_COORDINATES)
+		{
+			std::cerr << Error::OVAL_INVALID_COORDINATES;
+			return;
+		}
+		Figure::setCoords(coords);
+	}
+
+	void Circle::setCoords(const Coords* coords, size_t size)
+	{
+		if (size != Numberic::MINIMAL_CIRCLE_COORDINATES)
+		{
+			std::cerr << Error::OVAL_INVALID_COORDINATES;
+			return;
+		}
+		Figure::setCoords(coords, size);
 	}
 }

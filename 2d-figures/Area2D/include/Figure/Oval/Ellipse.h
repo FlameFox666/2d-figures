@@ -40,6 +40,10 @@ namespace Area2D
 		// Обчислення площі еліпса.
 		// Формула: S = PI * a * b.
 		double area() const override;
+
+		// Перевантаження встановлення координат для еліпсу.
+		void setCoords(const std::vector<Coords>& сoords) override;
+		void setCoords(const Coords* coords, size_t size) override;
 	};
 }
 

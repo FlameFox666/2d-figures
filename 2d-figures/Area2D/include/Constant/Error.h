@@ -17,11 +17,17 @@ namespace Area2D::Constant
 			"Ngon must have at least 5 coordinates.\n";
 
 		static constexpr const char* OVAL_INVALID_COORDINATES =
-			"Oval figures must have 3 coordinates: "
+			"Oval figures must have 2-3 coordinates: "
 			"center, vertical and horizontal radiuses.\n";
 
 		static constexpr const char* POLYGON_LESS_THAN_THREE_COORDINATES =
 			"Polygon figures must have at least 3 coordinates.\n";
+
+		static constexpr const char* TRIANGLE_THREE_COORDINATES =
+			"Triangles figures must have 3 coordinates.\n";
+
+		static constexpr const char* QUADRILATERAL_FOUR_COORDINATES =
+			"Quadrilaterals figures must have 4 coordinates.\n";
 
 		static constexpr const char* SECTOR_IVALID_ANGLE =
 			"Invalid measure type.\n";

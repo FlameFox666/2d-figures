@@ -96,6 +96,13 @@ int main() {
 		{4.0, 0.0}
 	};
 
+	Coords coords2[] = {
+		{0.0, 0.0},
+		{1.0, 1.0},
+		{2.0, 2.0},
+		{3.0, 2.0}
+	};
+
 	Ngon figure("abcd", coords, 5);
 	cout << figure[1];
 	figure.printCoords();
@@ -105,7 +112,13 @@ int main() {
 	cout << figure.perimeter() << "\n";
 	cout << figure.area() << "\n";
 	
-	
+	figure.setCoords(coords2, 4);
+	figure.printCoords();
+	for (auto& l : figure.getLine()) {
+		cout << l << "\n";
+	}
+	cout << figure.perimeter() << "\n";
+	cout << figure.area() << "\n";
 }
 
 /*

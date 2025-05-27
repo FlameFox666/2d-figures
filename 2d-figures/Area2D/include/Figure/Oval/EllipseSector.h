@@ -74,8 +74,11 @@ namespace Area2D
 		// Повертає координати.
 		using Ellipse::getCoords;
 
-		// Повертає координати еліпсу.
+		// Виводить координати кола.
 		using Ellipse::printCoords;
+
+		// Повертає координати кола.
+		using Ellipse::setCoords;
 
 	private:
 		// Обчислення периметра сектора еліпса у градусах.

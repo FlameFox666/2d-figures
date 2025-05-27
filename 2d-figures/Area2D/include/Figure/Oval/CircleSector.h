@@ -71,9 +71,12 @@ namespace Area2D
 		// Повертає координати.
 		using Circle::getCoords;
 
-		// Повертає координати кола.
+		// Виводить координати кола.
 		using Circle::printCoords;
-	
+		
+		// Повертає координати кола.
+		using Circle::setCoords;
+		
 	private:
 		// Обчислення периметра сектора кола у градусах.
 		// Формула: 2r * кут/360 * 2PI * r

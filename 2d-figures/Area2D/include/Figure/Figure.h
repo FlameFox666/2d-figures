@@ -46,6 +46,12 @@ namespace Area2D
 		// Встановлює нову назву для фігури.
 		void setName(const std::string& name);
 
+		 // Встановлює новий вектор координат фігури.
+		virtual void setCoords(const std::vector<Coords>& сoords);
+
+		 // Встановлює новий вектор координат фігури через масив.
+		virtual void setCoords(const Coords* coords, size_t size);
+
 		// Чисто віртуальна функція для обчислення периметру.
 		virtual double perimeter() const = 0; 
 

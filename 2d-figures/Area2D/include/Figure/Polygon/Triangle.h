@@ -38,6 +38,10 @@ namespace Area2D
 		// Обчислення площі трикутника.
 		// Формула: формула Герона — S = sqrt(p * (p - a) * (p - b) * (p - c)).
 		double area() const override;
+
+		// Перевантаження встановлення координат для трикутника.
+		void setCoords(const std::vector<Coords>& сoords) override;
+		void setCoords(const Coords* coords, size_t size) override;
 	};
 }
 

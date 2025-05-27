@@ -29,4 +29,14 @@ namespace Area2D
 	{
 		return coords;
 	}
+
+	void Figure::setCoords(const std::vector<Coords>& ñoords) 
+	{
+		this->coords = ñoords;
+	}
+
+	void Figure::setCoords(const Coords* coords, size_t size) 
+	{
+		this->coords.assign(coords, coords + size);
+	}
 }

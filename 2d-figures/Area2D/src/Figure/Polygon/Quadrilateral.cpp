@@ -105,4 +105,22 @@ namespace Area2D
 
 		return result;
 	}
+
+	void Quadrilateral::setCoords(const std::vector<Coords>& ñoords)
+	{
+		if (coords.size() != Numberic::QUADRILATERAL_VERTEX_COUNT)
+		{
+			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
+		}
+		Figure::setCoords(coords);
+	}
+
+	void Quadrilateral::setCoords(const Coords* coords, size_t size)
+	{
+		if (size != Numberic::QUADRILATERAL_VERTEX_COUNT)
+		{
+			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
+		}
+		Figure::setCoords(coords, size);
+	}
 }

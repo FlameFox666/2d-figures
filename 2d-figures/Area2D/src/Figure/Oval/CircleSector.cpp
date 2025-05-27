@@ -72,6 +72,11 @@ namespace Area2D
 
 	double CircleSector::perimeter() const
 	{
+		if (coords.empty()) {
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		if (degree > -1)
 		{
 			return degreePerimeter();
@@ -88,6 +93,11 @@ namespace Area2D
 
 	double CircleSector::area() const
 	{
+		if (coords.empty()) {
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return 0.0;
+		}
+
 		if (degree > -1)
 		{
 			return degreeArea();

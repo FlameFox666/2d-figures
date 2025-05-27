@@ -37,6 +37,10 @@ namespace Area2D
 		// Обчислення площі кола.
 		// Формула: S = PI * r^2.
 		double area() const override;
+
+		// Перевантаження встановлення координат для кола.
+		void setCoords(const std::vector<Coords>& сoords) override;
+		void setCoords(const Coords* coords, size_t size) override;
 	};
 }
 
