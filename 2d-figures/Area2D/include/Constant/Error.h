@@ -32,6 +32,9 @@ namespace Area2D::Constant
 		static constexpr const char* SECTOR_IVALID_ANGLE =
 			"Invalid measure type.\n";
 
+		static constexpr const char* SECTOR_ANGLE_OVERWRITE =
+			"This sector can't switch between angle types.\n";
+
 		static constexpr const char* UNAVAILABLE_COORDINATES =
 			"No coordinates available.\n";
 	};

@@ -44,9 +44,8 @@ namespace Area2D
 	void Quadrilateral::MeasureDiagonals() {
 		if (coords.size() != Numberic::QUADRILATERAL_VERTEX_COUNT) 
 		{
-			throw std::invalid_argument(
-				Error::UNAVAILABLE_COORDINATES
-			);
+			std::cerr << Error::UNAVAILABLE_COORDINATES;
+			return;
 		}
 
 		diagonal[0] = MeasureDistance(coords[0], coords[2]);
@@ -64,7 +63,8 @@ namespace Area2D
 
 		if (result <= 0)
 		{
-			throw std::logic_error(Error::DEGENERADE_POLYGON);
+			std::cerr << Error::DEGENERADE_POLYGON;
+			return 0.0;
 		}
 
 		return result;
@@ -100,7 +100,8 @@ namespace Area2D
 
 		if (result <= 0)
 		{
-			throw std::logic_error(Error::DEGENERADE_POLYGON);
+			std::cerr << Error::DEGENERADE_POLYGON;
+			return 0.0;
 		}
 
 		return result;
@@ -110,7 +111,8 @@ namespace Area2D
 	{
 		if (coords.size() != Numberic::QUADRILATERAL_VERTEX_COUNT)
 		{
-			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
+			std::cerr << Error::QUADRILATERAL_FOUR_COORDINATES;
+			return;
 		}
 		Figure::setCoords(coords);
 	}
@@ -119,7 +121,8 @@ namespace Area2D
 	{
 		if (size != Numberic::QUADRILATERAL_VERTEX_COUNT)
 		{
-			throw std::invalid_argument(Error::UNAVAILABLE_COORDINATES);
+			std::cerr << Error::QUADRILATERAL_FOUR_COORDINATES;
+			return;
 		}
 		Figure::setCoords(coords, size);
 	}

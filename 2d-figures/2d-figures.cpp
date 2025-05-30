@@ -53,18 +53,44 @@ int main() {
 	using std::cout;
 	using std::cin;
 	using std::endl;
-	/*
-	Coords coords[3] = {
+	
+	Coords coords[] = {
+		{-1, -1}, {0, 2}, {1, 0}, 
+	};
+
+	std::vector<Coords> coordsVector = {
 		{-1, -1}, {0, 2}, {2, -1}
 	};
 
-	//Triangle triangle1;
-	//Triangle triangle2({2, 31}, {-4, 1}, {3, -2});
-	//Triangle triangle3("abc", coords);
+	Ngon ngon;
+	Quadrilateral quad(
+		"abc", 
+		{ 0.0, 0.0 }, { 0.0, 2.2 }, 
+		{ 4.4, 2.2 }, { 4.4, 0.0 }
+	);
+	Triangle triangle("def", coords);
+
+	Circle circle("a", { 0.0, 0.0 }, { 3.0, 0.0 });
+	Ellipse ellipse("b", { 0.0, 0.0 }, { 3.0, 0.0 }, { 0.0, 4.4 });
+
+	cout << "Triangle area:  " << triangle.area() << "\n";
+	cout << "Quad perimeter: " << quad.perimeter() << "\n";
+	triangle.printCoords();
+	triangle.setName("newname");
+	triangle.setCoords(coordsVector);
+	triangle.printCoords();
+	cout << "First line of quad: " << quad[0] << "\n";
+	cout << "Radius of circle:   " << circle[0] << "\n\n";
+
+
+	CircleSector circleSector(circle, 1.57);
+	cout << circleSector.getAngle() << "\n";
+	circleSector.setAngle(2.03);
+	cout << circleSector.getAngle() << "\n";
 
 	//triangle1.printCoords();
 	//triangle2.printCoords();
-	triangle3.printCoords();
+	/*triangle3.printCoords();
 	cout << triangle3.perimeter() << "\n";
 	cout << triangle3.area() << "\n";
 	Triangle triangle4 = triangle3;
@@ -87,7 +113,7 @@ int main() {
 	cout << quad2.perimeter() << "\n";
 	cout << quad3.perimeter() << "\n";
 	*/
-
+	/*
 	Coords coords[] = {
 		{0.0, 0.0},
 		{1.0, 1.0},
@@ -119,6 +145,7 @@ int main() {
 	}
 	cout << figure.perimeter() << "\n";
 	cout << figure.area() << "\n";
+	*/
 }
 
 /*

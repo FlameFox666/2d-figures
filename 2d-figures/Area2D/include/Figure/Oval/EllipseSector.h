@@ -65,6 +65,9 @@ namespace Area2D
 		// Повертає кут.
 		using Sector::getAngle;
 
+		// Встановлює кут.
+		using Sector::setAngle;
+
 		// Повертає назву фігури.
 		using Ellipse::getName;
 
@@ -84,12 +87,12 @@ namespace Area2D
 		// Обчислення периметра сектора еліпса у градусах.
 		// Формула: P = 2 * sqrt((a^2  + b^2 ) / 2) + 
 		//			    кут / 360 * P еліпса
-		double degreePerimeter() const;
+		double degreePerimeter(double squareRoot) const;
 
 		// Обчислення периметра сектора еліпса у радіанах.
 		// Формула: P = 2 * sqrt((a^2  + b^2) / 2) + 
 		//			    кут / 2PI * P еліпса
-		double radianPerimeter() const;
+		double radianPerimeter(double squareRoot) const;
 
 		// Обчислення площі сектора еліпса у градусах.
 		// Формула: S = (2PI * r1 * r2 * кут) / 360

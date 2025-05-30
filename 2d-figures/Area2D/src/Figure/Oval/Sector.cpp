@@ -32,4 +32,24 @@ namespace Area2D
 		}
 		return 0.0;
 	}
+
+	void Sector::setAngle(int degree)
+	{
+		if (degree <= 0) {
+			std::cerr << Error::SECTOR_IVALID_ANGLE;
+			return;
+		}
+		this->degree = degree;
+		radian = -1.0;
+	}
+
+	void Sector::setAngle(double radian)
+	{
+		if (radian <= 0) {
+			std::cerr << Error::SECTOR_IVALID_ANGLE;
+			return;
+		}
+		this->radian = radian;
+		degree = -1;
+	}
 }

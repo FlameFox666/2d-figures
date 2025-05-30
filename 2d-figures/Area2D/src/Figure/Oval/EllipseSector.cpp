@@ -49,24 +49,14 @@ namespace Area2D
 	)
 		: Ellipse(name, coords), Sector(degree) {}
 
-	double EllipseSector::degreePerimeter() const
+	double EllipseSector::degreePerimeter(double squareRoot) const
 	{
-		double squareRoot = sqrt(
-			(pow(radius[0], Numberic::POWER_OF_TWO)  +
-			 pow(radius[1], Numberic::POWER_OF_TWO)) * Numberic::DIVIDE_BY_TWO
-		);
-
 		return Numberic::RADIUS_COUNT * squareRoot + static_cast<double>(degree) / 
 			   Numberic::FULL_CIRCLE * Ellipse::perimeter();
 	}
 
-	double EllipseSector::radianPerimeter() const
+	double EllipseSector::radianPerimeter(double squareRoot) const
 	{
-		double squareRoot = sqrt(
-			(pow(radius[0], Numberic::POWER_OF_TWO)  + 
-			 pow(radius[1], Numberic::POWER_OF_TWO)) * Numberic::DIVIDE_BY_TWO
-		);
-
 		return Numberic::RADIUS_COUNT * squareRoot + 
 			   (radian / (Numberic::TWO_PI)) * Ellipse::perimeter();
 	}
@@ -89,13 +79,19 @@ namespace Area2D
 			return 0.0;
 		}
 
+		double squareRoot = sqrt(
+			(pow(radius[0], Numberic::POWER_OF_TWO) +
+			 pow(radius[1], Numberic::POWER_OF_TWO)) * 
+			Numberic::DIVIDE_BY_TWO
+		);
+
 		if (degree > -1)
 		{
-			return degreePerimeter();
+			return degreePerimeter(squareRoot);
 		}
 		else if (radian > -1.0)
 		{
-			return radianPerimeter();
+			return radianPerimeter(squareRoot);
 		}
 		else
 		{

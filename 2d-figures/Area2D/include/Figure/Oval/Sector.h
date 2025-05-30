@@ -1,16 +1,13 @@
 #pragma once
 #include "Constant/Numberic.h"
 #include "Constant/Error.h"
+#include <iostream>
 
 namespace Area2D 
 {
-	// Абстрактний клас представляє сектор овальних фігур.
-	// Містить методи для переведення радіан у градуса та навпаки.
-
 	// Абстрактний базовий клас для всіх секторів 2D геометричних 
 	// овальних фігур.
-	// Містить віртуальні методи для обчислення периметру, площі 
-	// та відображення координат фігури.
+	// Містить кут сектору.
 	class Sector 
 	{
 	protected:
@@ -29,5 +26,11 @@ namespace Area2D
 
 		// Повертає кут.
 		double getAngle() const;
+
+		// Встановлює кут у градусах.
+		void setAngle(int degree);
+
+		// Встановлює кут у радіанах.
+		void setAngle(double radian);
 	};
 }

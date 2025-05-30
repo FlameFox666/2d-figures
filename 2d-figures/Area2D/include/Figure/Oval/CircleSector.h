@@ -62,6 +62,9 @@ namespace Area2D
 		// Повертає кут.
 		using Sector::getAngle;
 
+		// Встановлює кут.
+		using Sector::setAngle;
+
 		// Повертає назву фігури.
 		using Circle::getName;
 
